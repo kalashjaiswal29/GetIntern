@@ -1,0 +1,162 @@
+.domainsSection{
+  width: 100%;
+  background-color: #F6F9FF;
+
+}
+
+
+.domainsContainer {
+  font-family: "Montserrat", sans-serif;
+  padding-block: 3rem 3.6rem;
+  padding-inline: clamp( 1.946rem, 5vw, 1.5rem);
+  color: #0b1f3a;
+  max-width: 1270px;
+  width: 100%;
+  margin: 0 auto;
+   /* gap: clamp(1.5rem, 3vw, 2.5rem); */
+  /* row-gap: min(8vw,8vh); */
+  /* row-gap: clamp( 3rem, 5vw, 4rem); */
+}
+
+.domainsHeading {
+  font-size: 2.204rem;
+  font-weight: 500;
+  text-align: center;
+} 
+
+.blue {
+  color: #0b1f3a;
+}
+
+.orange {
+  color: #FE8409;
+}
+
+.domainsSubHead {
+  color: #555555;
+  font-family: "Inter", sans-serif;
+  font-size: 1.0008rem;
+  line-height: 1.8912rem;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.0556rem;
+  margin-top: 1.3rem;
+}
+
+.card {
+  width: 17.792rem;
+  border-radius: 0.834rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  min-height: 10.564rem;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor:pointer ;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /*New*/
+ flex: 1 1 calc(33.333% - 2rem);         /* ~3 columns, gap minus */
+  max-width: calc(33.333% - 2rem);
+}
+
+@media (max-width: 1000px) {     /* tablet: 2 columns */
+  .card {
+    flex-basis: calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+  }
+}
+@media (max-width: 700px) {     /* tablet: 2 columns */
+  .card {
+    flex-basis: calc(100% - 2rem);
+    max-width: calc(100% - 2rem);
+  }
+}
+
+.card:hover {/*New*/
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.img {
+  height: 55%;
+}
+
+.cardsContainer {
+  padding-top: 2.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  column-gap: 1rem;
+  row-gap: 3.5rem;
+
+}
+
+.iconCircle {
+  height: 3.892rem;
+  width: 3.892rem;
+  border-radius: 50%;
+  background-color: rgb(255, 122, 0, 0.66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease; /*New*/
+}
+.card:hover .iconCircle {/*New*/
+  transform: scale(1.05);
+}
+.cardTitle {
+  font-size: 1.39rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.card:hover .cardTitle {
+  color: #ff8a00; /* tumhara orange accent */
+}
+
+@media(max-width:998px){
+  .domainsHeading {
+  font-size: 2.02rem;
+ 
+} .domainsSubHead {
+  color: #555555f9;
+  font-size: 1rem;
+  
+}
+
+.cardsContainer {
+  padding-top: 2.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  column-gap: 1rem;
+  row-gap: 3.5rem;
+
+}
+
+.iconCircle {
+  height: 3.592rem;
+  width: 3.592rem;
+ 
+}
+.cardTitle {
+  font-size: 1.2rem;
+  
+}
+
+}
+
+@media(max-width:575px){
+.domainsContainer {
+  
+  padding-inline: 1rem
+  
+}
+.domainsHeading {
+  font-size: 1.8rem;
+  font-weight: 450;
+  text-align: center;
+} 
+
+
+}

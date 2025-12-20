@@ -1,0 +1,41 @@
+.msmeContainer {
+  min-height: 21.962rem;
+  font-family: "Montserrat", sans-serif;
+  color: #0b1f3a;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  align-items: center;
+  gap: 2.3352rem;
+}
+
+.imgMsme {
+  max-height: 10.6196rem;
+  max-width: 13.3996rem;
+  margin-top: 2.3352rem;
+  
+}
+
+.p1 {
+  font-size: 1.39rem;
+}
+
+.p2 {
+  font-size: 1.668rem;
+}
+
+@media(max-width:998px){
+  .p1 {
+  font-size: 1.29rem;
+}
+
+.p2 {
+  font-size: 1.568rem;
+}
+.imgMsme {
+  max-height: 9.6196rem;
+  max-width: 12.3996rem;
+  margin-top: 2.3352rem;
+  
+}
+}

@@ -1,0 +1,151 @@
+.navLine {
+  height: 0.05rem;
+  background-color: black;
+  
+  width: 100%;
+}
+.nav {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  right: 0rem;
+  background-color: #FFFFFF;
+  z-index: 100;
+  /* Figma frame width */
+  align-self: center;
+  margin: auto;
+  width: 100%;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1270px;
+  padding-inline: 1.946rem;
+  margin: auto
+}
+
+.logo {
+  display: inline-block;
+  margin: 0.8rem 0rem 2.30rem 0rem;
+  /* width: 6.25rem; */
+  height: 2.5rem;
+  position: relative;
+}
+
+.name {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.891rem;
+  letter-spacing: -0.14456rem;
+  font-weight: 500;
+  color: #0B1F3A;
+  line-height: 4.3368rem;
+}
+
+.tm {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #0A59CD;
+  font-size: 1.112rem;
+  position: absolute;
+  top: 1.32rem;
+  left: 12.1rem;
+}
+
+.navRight {
+  display: inline-flex;
+  gap: 1.4456rem;
+  text-wrap: wrap;
+}
+
+.li {
+  list-style: none;
+  display: inline-block;
+  padding: 0rem 1.112rem 0rem 1.112rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2232rem;
+  border-radius: 1.112rem;
+
+  line-height: 2.8912rem;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.li:hover {
+  cursor: pointer;
+  background-color: #FE8409;
+  color: #FFFFFF;
+
+}
+
+
+@media(max-width:1240px){
+  .navBar {
+  
+  max-width: 1000px;
+  
+}
+ .name {
+  font-size: 2.62rem;
+  line-height: 4.3368rem;
+}
+
+
+.tm {
+ 
+  font-size: 1.1rem;
+  top: 1.38rem;
+  left: 10.8rem;
+}
+.li {
+  
+  padding: 0rem 0.8596rem 0rem 0.8596rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.078488rem;
+  border-radius: 0.97856rem;
+}
+
+}
+@media(max-width:998px){
+   .name {
+  font-size: 2.42rem;
+    line-height: 4.2368rem;
+
+}
+.tm {
+ 
+  font-size: 0.98rem;
+  top: 1.44rem;
+  left: 9.9rem;
+}
+
+.navRight {
+  display:none
+}
+.navBar {
+  
+  max-width: 768px;
+  margin-inline: auto;
+  
+}
+}
+@media(max-width:767px){
+  .navBar {
+  
+  max-width: 576px;
+  margin-inline: auto;
+  
+}
+}
+@media(max-width:575px){
+.navBar {
+  
+  padding-inline: 1rem;
+  
+}
+
+}

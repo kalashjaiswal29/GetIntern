@@ -1,0 +1,373 @@
+.mainHero {
+  position: relative;
+  max-width: 1270px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 1.946rem;
+}
+
+.textMain {
+  margin-top: 6rem;
+  color: #0B1F3A;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+}
+
+
+.mainHead {
+  font-size: 3.31rem;
+  font-weight: 500;
+  line-height: 5.2264rem;
+  letter-spacing: -0.064rem;
+  /* min-width: 46.704rem; */
+  /* white-space: nowrap; */
+  display: inline-block;
+  overflow: visible
+}
+
+.withText {
+  font-size: 1.668rem;
+  font-weight: 400;
+  line-height: 2.199rem;
+  padding-left: 0.3892rem;
+}
+
+.brandText {
+  font-size: 2.502rem;
+  font-weight: 500;
+  line-height: 2.199rem;
+
+}
+
+.subText {
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.040032rem;
+  color: #3A3A3A;
+  font-size: 1.0008rem;
+  font-weight: 400;
+  display: inline-block;
+  max-width: 32.36rem;
+  padding-left: 0.3892rem;
+  line-height: 1.946rem;
+  margin-top: 1.846rem;
+}
+
+.buttonGroup {
+  margin-top: 1.646rem;
+  gap: 2.1684rem;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.twobButtons {
+  list-style: none;
+  font-weight: 400;
+  padding: 0rem 1.1rem 0rem 1.1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  border-radius: 1.1rem;
+  line-height: 2.88rem;
+}
+
+.twobButtons:hover {
+  cursor: pointer;
+}
+
+.applybutton {
+  background-color: #0A59CD;
+  color: #FFFFFF;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.applybutton:hover {
+  transform: scale(1.03);
+  /* small zoom */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.viewButton {
+  border: #0A59CD solid 0.1112rem;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.viewButton:hover {
+  background-color: #0A59CD;
+  color: #FFFFFF;
+}
+
+.imageCollage {
+  display: inline-block;
+  position: absolute;
+  right: 0rem;
+  top: 5.478824rem;
+  padding-right: 1.946rem;
+}
+
+
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* grid-template-rows: 21.6284rem; */
+  column-gap: 0.834rem;
+  row-gap: 0.834rem;
+}
+
+.graduateGirlwithCap {
+  max-width: 13rem;
+  max-height: 21.6284rem;
+  grid-row: span 2;
+  border-radius: 1.4456rem;
+  align-self: center;
+}
+
+.mentorMentee {
+  max-width: 16.05rem;
+  max-height: 12.3432rem;
+  border-radius: 1.4456rem;
+  justify-self: end;
+}
+
+.employeeMentee {
+  max-width: 20.016rem;
+  max-height: 12.2876rem;
+  border-radius: 1.4456rem;
+}
+
+.cap {
+  position: absolute;
+  top: 10.776rem;
+  left: 18.4904rem;
+}
+
+
+@media(max-width:1240px) {
+  .mainHero {
+    max-width: 1000px;
+  }
+
+  .graduateGirlwithCap {
+    max-width: 10.3rem;
+    max-height: 17.47rem;
+    border-radius: 1.168rem;
+
+  }
+
+  .textMain {
+    margin-top: 6.4rem;
+
+  }
+
+
+  .mentorMentee {
+    max-width: 12.7684rem;
+    max-height: 9.9733056rem;
+    border-radius: 1.1680448rem;
+  }
+
+  .employeeMentee {
+    max-width: 16.062928rem;
+    max-height: 9.9283808rem;
+    border-radius: 1.1680448rem;
+  }
+
+  .cap {
+    position: absolute;
+    top: 8.6rem;
+    left: 15.0rem;
+    height: 3rem;
+  }
+
+  .grid {
+    column-gap: 0.55rem;
+    row-gap: 0.6rem;
+  }
+
+  .imageCollage {
+
+    top: 6.978824rem;
+  }
+
+  .mainHead {
+    font-size: 2.67448rem;
+    font-weight: 500;
+    line-height: 4.2229312rem;
+    letter-spacing: -0.074rem;
+
+  }
+
+  .withText {
+    font-size: 1.347744rem;
+    line-height: 1.8rem;
+    padding-left: 0.3144736rem;
+  }
+
+  .brandText {
+    font-size: 2.021616rem;
+    line-height: 1.8rem;
+
+  }
+
+  .subText {
+    letter-spacing: 0.052345856rem;
+    font-size: 0.99rem;
+    max-width: 29rem;
+    padding-left: 0.3144736rem;
+    line-height: 1.572368rem;
+    margin-top: 1.491568rem;
+    color: #3a3a3ae6;
+
+  }
+
+  .twobButtons {
+    padding: 0rem 1rem 0rem 1rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.08rem;
+    border-radius: 1.1rem;
+    line-height: 2.7rem;
+  }
+}
+
+@media(max-width:998px) {
+  .imageCollage {
+    display: none;
+  }
+
+  .mainHero {
+    max-width: 768px;
+  }
+
+  .mainHead {
+    font-size: 2.57448rem;
+
+    letter-spacing: 0rem;
+
+  }
+
+  .withText {
+    font-size: 1.247744rem;
+    padding-left: 0.3144736rem;
+  }
+
+  .brandText {
+    font-size: 1.921616rem;
+  }
+
+  .subText {
+    font-size: 0.98rem;
+
+    line-height: 2rem;
+  }
+
+  .twobButtons {
+    margin-top: 0.5rem;
+    padding: 0rem 1rem 0rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 1.1rem;
+    line-height: 2.78rem;
+  }
+
+  .textMain {
+    margin-top: 5.2rem;
+
+  }
+
+}
+
+@media(max-width:767px){
+  .mainHero {
+    max-width: 576px;
+  }
+  
+
+  .mainHead {
+    font-size: 2.3rem;
+    letter-spacing: 0rem;
+
+  }
+
+  .withText {
+    font-size: 1.1rem;
+    padding-left: 0.3144736rem;
+  }
+
+  .brandText {
+    font-size: 1.8rem;
+  }
+
+  .subText {
+    font-size: 0.94rem;
+
+    line-height: 2rem;
+  }
+
+  .twobButtons {
+    margin-top: 0.5rem;
+    padding: 0rem 1rem 0rem 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    line-height: 2.51rem;
+  }
+
+  .textMain {
+    margin-top: 5.2rem;
+
+  }
+}
+
+@media(max-width:575px){
+.mainHero {
+  
+  padding-inline: 1rem;
+}
+
+  
+
+  .mainHead {
+    font-size: 2rem;
+    letter-spacing: 0rem;
+    font-weight: 450;
+    line-height: 4rem;
+  }
+
+  .withText {
+    font-size: 0.95rem;
+    padding-left: 0.3144736rem;
+    line-height: 2rem;
+
+  }
+
+  .brandText {
+    font-size: 1.5rem;
+        font-weight: 450;
+line-height: 2rem;
+  }
+
+  .subText {
+    font-size: 0.94rem;
+line-height: 2.199rem;
+      line-height: 1.946rem;
+
+  }
+
+  .twobButtons {
+    margin-top: 0.5rem;
+    padding: 0rem 1rem 0rem 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    line-height: 2.51rem;
+  }
+
+  .textMain {
+    margin-top: 5.2rem;
+
+  }
+
+}

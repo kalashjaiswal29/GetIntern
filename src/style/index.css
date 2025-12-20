@@ -1,0 +1,39 @@
+*{
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.main-wrapper {
+  /* max-width: 1270px;  / Figma frame width */
+  margin: 0 auto;      /* center the layout */
+}
+
+html, body {
+  /* prevent horizontal overflow on small screens */
+  overflow-x:hidden
+}
+
+html{
+  font-size: 16px;
+  scroll-behavior: smooth;
+} 
+
+body{
+  background-color: #ffffff;
+  /* padding: 4.981204rem 3.12vw 0 3.12vw;  */
+  padding-top: 4.981204rem;
+}
+
+/* Make all images responsive to avoid pushing layout wider than viewport */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+} 
+/* @media(max-width:998px){
+  html{
+    font-size: 12px;
+  }
+} */
+

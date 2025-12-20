@@ -1,0 +1,110 @@
+.servicesContainer {
+  color: #0B1F3A;
+  min-height: 22.0732rem;
+}
+
+.cardsContainer{
+  display:flex ;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 2.5rem; 
+  row-gap: 3rem;
+}
+.heading {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2.224rem;
+  padding: 1.2232rem 0.556rem
+}
+
+.card {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
+  border-radius: 1.112rem;
+  width: 27.1328rem;
+  height: 9.452rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.iconBox {
+  width: 5.4488rem;
+  height: 100%;
+  background: linear-gradient(90deg,
+      rgba(255, 167, 58, 0.79) 0%,
+      rgba(255, 140, 0, 0.79) 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+}
+
+.icon{
+  height: 28%;
+}
+.cardContent {
+  padding-left: 1.2232rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.cardHead {
+  font-size: 1.5568rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 2.502rem;
+
+}
+
+.cardSubHead {
+  font-size: 0.9452rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 2.502rem;
+  color: #555555;
+  letter-spacing: 0.0556rem;
+}
+
+@media(max-width:998px){
+  .servicesContainer {
+  max-width: 768px;
+  margin-inline: auto;
+  padding-bottom: 4rem;
+  margin-top: 1.9rem; 
+} 
+.card{
+width: 30rem;
+height: 7.452rem;
+}
+.heading {
+  font-weight: 550;
+  font-size: 2.11rem;
+  padding: 1.2232rem 0.556rem
+}
+.cardHead {
+  font-size: 1.3568rem;
+  
+
+}
+.appIcon{
+  height: 45%;
+}
+.icon{
+  height: 30%;
+}
+.cardSubHead {
+  font-size: 0.92rem;
+  
+  color: #555555e8;
+}
+}
+@media(max-width:575px){
+  .heading {
+  font-weight: 470;
+  font-size: 1.88rem;
+  
+}
+}

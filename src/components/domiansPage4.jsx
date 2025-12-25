@@ -62,7 +62,7 @@ const Domains = () => {
         <div className={styles.cardsContainer}>
           {cardsContent.map(({ img, title }) => {
             return (
-              <li className={styles.card}>
+              <li className={styles.card} key={title}>
                 <div className={styles.iconCircle}>
                   <img className={styles.img} src={img} alt="icon" />
                 </div>

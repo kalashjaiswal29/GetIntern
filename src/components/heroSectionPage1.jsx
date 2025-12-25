@@ -1,10 +1,10 @@
 import NavBar from "./navBar";
 import FrontPage from "./frontPage";
 
-const HeroSection = () => {
+const HeroSection = ({handleNavClick,activeSection}) => {
   return (
     <>
-    <NavBar/>
+    <NavBar handleNavClick={handleNavClick} activeSection={activeSection}/>
     <FrontPage/>
     </>
   )

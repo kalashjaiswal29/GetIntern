@@ -29,7 +29,7 @@ const StartYourJourney = () => {
       <h1 className={styles.startHead}>Start Your Journey</h1>
       <div className={styles.stepsContainer}>
         {step.map(({ no, title, subHead }) => {
-          return (<li className={styles.stepBox}>
+          return (<li className={styles.stepBox} key={no}>
             <div className={styles.stepCircle}>{no}</div>
             <h3 className={styles.stepTitle}>{title}</h3>
             <p className={styles.stepSubHead}>{subHead}</p>

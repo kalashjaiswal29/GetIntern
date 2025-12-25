@@ -1,14 +1,22 @@
 import styles from "../style/NavBar.module.css";
-import React from "react";
-import { useState } from "react";
 
-const NavRightEl = () => {
+const NavRightEl = ({ handleNavClick }) => {
   let navRight = ["Home", "Internships", "Services", "About Us", "Contact Us"];
-  const [menu,setMenu] = useState(false)
+
   return (
     <div className={styles.navRight}>
       {navRight.map((item) => {
-        return <li className={!menu ? styles.li : styles.menu} key={item}>{item}</li>;
+        return (
+          <li
+            className={styles.li}
+            key={item}
+            onClick={() => {
+              handleNavClick(item);
+            }}
+          >
+            {item}
+          </li>
+        );
       })}
     </div>
   );

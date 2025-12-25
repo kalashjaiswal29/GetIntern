@@ -23,7 +23,7 @@ const Services = () => {
       <div className={styles.cardsContainer}>
         {cards.map(({ icon, heading, subHead,className }) => {
           return (
-            <li className={styles.card}>
+            <li className={styles.card} key={heading} >
               <div className={styles.iconBox}>
                 <img src={icon} className={className} alt={icon} />
               </div>

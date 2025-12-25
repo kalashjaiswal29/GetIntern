@@ -2,12 +2,12 @@ import styles from "../style/NavBar.module.css";
 import NavLogo from "./navLogo";
 import NavRightEl from "./navRightEl";
 
-const NavBar = () => {
+const NavBar = ({handleNavClick,activeSection}) => {
   return (
     <div className={styles.nav}>
       <div className={styles.navBar}>
         <NavLogo />
-        <NavRightEl />
+        <NavRightEl handleNavClick={handleNavClick} activeSection={activeSection}/>
       </div>
       <div className={styles.navLine}></div>
     </div>

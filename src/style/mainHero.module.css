@@ -57,7 +57,7 @@
   gap: 2.1684rem;
   display: flex;
   flex-wrap: wrap;
-
+  row-gap: 0.9rem;
 }
 
 .twobButtons {

@@ -7,11 +7,11 @@ const Services = () => {
     {
       icon: webd,
       heading: "Web Development",
-      subHead: "Modern, fast, responsive sites.",
+      subHead: "Modern, fast, responsive websites.",
       className: styles.icon
     },
     {
-      icon: appd,
+      icon:appd,
       heading: "App Development",
       subHead: "Build custom Android & web apps.",
       className: styles.appIcon

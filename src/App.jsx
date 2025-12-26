@@ -7,95 +7,31 @@ import Services from "./components/servicesPage5.jsx";
 import AboutUS from "./components/aboutusPage6.jsx";
 import MSME from "./components/msmePage7.jsx";
 import Footer from "./components/footerPage8.jsx";
-import {
-  Link,
-  Button,
-  Element,
-  scroller,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-} from "react-scroll";
+import {Element} from "react-scroll";
 
 function App() {
-
-  const handleNavClick = (item) => {
-    switch (item) {
-      case "Home":
-        scroller.scrollTo("heroSectionRef", {
-          duration: 150,
-          delay: 0,
-          smooth: true,
-          offset: -89.59, 
-        });
-        
-        break;
-      case "Internships":
-        scroller.scrollTo("domainsSectionRef", {
-          duration: 150,
-          delay: 0,
-          smooth: true,
-          offset: -89.59, 
-        });
-        
-        break;
-      case "Services":
-        scroller.scrollTo("servicesSectionRef", {
-          duration: 150,
-          delay: 0,
-          smooth: true,
-          offset: -89.59, 
-        });
-        
-        break;
-      case "About Us":
-        scroller.scrollTo("aboutSectionRef", {
-          duration: 150,
-          delay: 0,
-          smooth: true,
-          offset: -89.59, 
-        });
-        
-        break;
-      case "Contact Us":
-        scroller.scrollTo("footerSectionRef", {
-          duration: 150,
-          delay: 0,
-          smooth: true,
-          offset: -89.59, 
-        });
-        
-        break;
-      default:
-        break;
-    }
-  };
-
   return (
     <div className="main-wrapper ">
-      <Element name="heroSectionRef">
-        <HeroSection
-          handleNavClick={handleNavClick}
-          
-        />
+      <Element name="heroSection">
+        <HeroSection />
         <QualtiesCommitment />
         <StartYourJourney />
       </Element>
 
-      <Element  name="domainsSectionRef">
+      <Element name="domainsSection">
         <Domians />
       </Element>
 
-      <Element name="servicesSectionRef">
+      <Element name="servicesSection">
         <Services />
       </Element>
 
-      <Element  name="aboutSectionRef">
+      <Element name="aboutSection">
         <AboutUS />
         <MSME />
       </Element>
 
-      <Element name="footerSectionRef">
+      <Element name="footerSection">
         <Footer />
       </Element>
     </div>

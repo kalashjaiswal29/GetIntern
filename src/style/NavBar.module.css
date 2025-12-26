@@ -1,9 +1,9 @@
 .navLine {
   height: 0.05rem;
   background-color: black;
-  
   width: 100%;
 }
+
 .nav {
   position: fixed;
   top: 0rem;
@@ -66,7 +66,6 @@
   font-family: "Inter", sans-serif;
   font-size: 1.2232rem;
   border-radius: 1.112rem;
-
   line-height: 2.8912rem;
   transition:
     background-color 200ms ease,
@@ -75,82 +74,78 @@
     box-shadow 150ms ease;
 }
 
+.activeLi {
+  background-color: #FE8409;
+  color: #FFFFFF;
+  border-radius: 1.112rem;
+}
+
 
 .li:hover {
   cursor: pointer;
   background-color: #FE8409;
   color: #FFFFFF;
-
 }
 
-.activeLi{
-  background-color: #FE8409;
-  color: #FFFFFF;
-}
 
-@media(max-width:1240px){
+@media(max-width:1240px) {
   .navBar {
-  
-  max-width: 1000px;
-  
-}
- .name {
-  font-size: 2.62rem;
-  line-height: 4.3368rem;
-}
+    max-width: 1000px;
+  }
+
+  .name {
+    font-size: 2.62rem;
+    line-height: 4.3368rem;
+  }
 
 
-.tm {
- 
-  font-size: 1.1rem;
-  top: 1.38rem;
-  left: 10.8rem;
-}
-.li {
-  
-  padding: 0rem 0.8596rem 0rem 0.8596rem;
-  font-family: "Inter", sans-serif;
-  font-size: 1.078488rem;
-  border-radius: 0.97856rem;
-}
+  .tm {
+    font-size: 1.1rem;
+    top: 1.38rem;
+    left: 10.8rem;
+  }
+
+  .li {
+    padding: 0rem 0.8596rem 0rem 0.8596rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.078488rem;
+    border-radius: 0.97856rem;
+  }
 
 }
-@media(max-width:998px){
-   .name {
-  font-size: 2.42rem;
+
+@media(max-width:998px) {
+  .name {
+    font-size: 2.42rem;
     line-height: 4.2368rem;
+  }
 
-}
-.tm {
- 
-  font-size: 0.98rem;
-  top: 1.44rem;
-  left: 9.9rem;
-}
+  .tm {
+    font-size: 0.98rem;
+    top: 1.44rem;
+    left: 9.9rem;
+  }
 
-.navRight {
-  display:none
-}
-.navBar {
-  
-  max-width: 768px;
-  margin-inline: auto;
-  
-}
-}
-@media(max-width:767px){
+  .navRight {
+    display: none
+  }
+
   .navBar {
-  
-  max-width: 576px;
-  margin-inline: auto;
-  
+    max-width: 768px;
+    margin-inline: auto;
+  }
 }
+
+@media(max-width:767px) {
+  .navBar {
+    max-width: 576px;
+    margin-inline: auto;
+  }
 }
-@media(max-width:575px){
-.navBar {
-  
-  padding-inline: 1rem;
-  
-}
+
+@media(max-width:575px) {
+  .navBar {
+    padding-inline: 1rem;
+  }
 
 }

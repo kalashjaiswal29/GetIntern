@@ -1,21 +1,31 @@
 import styles from "../style/NavBar.module.css";
+import { Link } from "react-scroll";
 
-const NavRightEl = ({ handleNavClick }) => {
-  let navRight = ["Home", "Internships", "Services", "About Us", "Contact Us"];
+const NavRightEl = () => {
+  let navRight = [
+    { label: "Home", target: "heroSection" },
+    { label: "Internships", target: "domainsSection" },
+    { label: "Services", target: "servicesSection" },
+    { label: "About Us", target: "aboutSection" },
+    { label: "Contact Us", target: "footerSection" },
+  ];
 
   return (
     <div className={styles.navRight}>
       {navRight.map((item) => {
         return (
-          <li
-            className={styles.li}
-            key={item}
-            onClick={() => {
-              handleNavClick(item);
-            }}
+          <Link
+            activeClass={styles.activeLi}
+            to={item.target}
+            spy={true}
+            smooth="easeInOutQuint"
+            duration={1000}
+            offset={-300} //89.59
           >
-            {item}
-          </li>
+            <li key={item.label} className={styles.li}>
+              {item.label}
+            </li>
+          </Link>
         );
       })}
     </div>

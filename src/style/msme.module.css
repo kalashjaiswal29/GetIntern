@@ -39,3 +39,20 @@
   
 }
 }
+
+@media(max-width:465px){
+  .msmeText{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    text-align: center;
+    gap: 0.2rem ;
+  }
+    .p1 {
+  font-size: 1.15rem;
+}
+
+.p2 {
+  font-size: 1.45rem;
+}
+}

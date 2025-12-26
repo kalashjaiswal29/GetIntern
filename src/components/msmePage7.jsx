@@ -5,7 +5,7 @@ const MSME = () => {
   return(
     <div className={styles.msmeContainer}>
       <img src={imgMsme} alt="MSME" className={styles.imgMsme}/>
-      <p>
+      <p className={styles.msmeText}>
         <span className={styles.p1}><i>Registered under </i></span>
         <span className={styles.p2}><i>MSME, Govt. of India</i></span>
       </p>

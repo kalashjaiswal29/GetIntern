@@ -281,11 +281,11 @@
 
 }
 
-@media(max-width:767px){
+@media(max-width:767px) {
   .mainHero {
     max-width: 576px;
   }
-  
+
 
   .mainHead {
     font-size: 2.3rem;
@@ -322,13 +322,13 @@
   }
 }
 
-@media(max-width:575px){
-.mainHero {
-  
-  padding-inline: 1rem;
-}
+@media(max-width:575px) {
+  .mainHero {
 
-  
+    padding-inline: 1rem;
+  }
+
+
 
   .mainHead {
     font-size: 2rem;
@@ -346,14 +346,14 @@
 
   .brandText {
     font-size: 1.5rem;
-        font-weight: 450;
-line-height: 2rem;
+    font-weight: 450;
+    line-height: 2rem;
   }
 
   .subText {
     font-size: 0.94rem;
-line-height: 2.199rem;
-      line-height: 1.946rem;
+    line-height: 2.199rem;
+    line-height: 1.946rem;
 
   }
 
@@ -369,5 +369,40 @@ line-height: 2.199rem;
     margin-top: 5.2rem;
 
   }
+
+}
+
+@media(max-width:454px) {
+
+   .mainHead {
+    font-size: 1.9rem;
+
+    
+  }
+
+
+}
+
+
+@media(max-width:432px) {
+
+   .mainHead {
+    font-size: 1.9rem;
+    line-height: 2.8rem;
+    
+  }
+
+  .textMain {
+    margin-top: 5rem;
+
+  }
+  .subText{
+    margin-top: 1.2rem;
+  }
+  .buttonGroup {
+  margin-top: 1.5rem;
+  
+}
+
 
 }

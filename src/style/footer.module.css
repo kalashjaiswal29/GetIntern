@@ -38,7 +38,9 @@
   font-weight: 200;
   line-height: 2.224rem;
 }
-
+a{
+  text-decoration: none;
+}
 .footer2 {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.85);
@@ -73,6 +75,11 @@
 
 .footer4_5 {
   font-weight: 300;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9); 
+}
+.call span a{
+color: rgba(255, 255, 255, 0.9); 
 }
 
 .icons {
@@ -131,11 +138,52 @@
 /* -------- 447px -------- */
 
 @media (max-width: 447px) {
-  .footerContainer {
-    height: 30.2988rem;
-  }
 
-  .footer3 {
-    line-height: 1.5rem;
+  .footerContainer {
+    height: 27.5rem;
   }
+  .call{
+    display: flex;
+    flex-direction: column;
+  }
+  .divider{
+    display: none;
+  }
+  .footer3 {
+    margin-top: 0.4rem;
+    line-height: 1.5rem;
+   display: grid ;
+   grid-template-columns: 1fr  ;
+   text-align: center;
+  }
+  .footer1 {
+  font-weight: 470;
+  font-size: 1.5rem;
+}
+.footertm {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+}
+.copyWright {
+  font-size: 0.69rem;
+}
+
+.iconBorder {
+  height: 1.9rem;
+  width: 1.9rem;
+  border: 0.1rem solid #FE8409;
+
+}
+.footer2 {
+  line-height: 0.6rem;
+  
+}
+
+.footer4 {
+  
+  line-height: 1.8rem;
+
+}
+
+
 }

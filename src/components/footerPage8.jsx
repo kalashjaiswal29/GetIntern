@@ -26,10 +26,10 @@ const Footer = () => {
         <span className={styles.footer4}>
           <span>
             Email -{" "}
-            <span className={styles.footer4_5}>contact@getintern.ac.in</span>
+            <a href="mailto:contact@getintern.ac.in" className={styles.footer4_5}>contact@getintern.ac.in</a>
           </span>
-          <span>
-            📞 +91 6006312288{"     "}|{"     "}+91 7905891176
+          <span className={styles.call}>
+            <span>📞 <a href="tel:+916006312288">+91 6006312288</a></span><span className={styles.divider}>|</span><span>📞 <a href="tel:+917905891176">+91 7905891176</a></span>
           </span>
         </span>
         <div className={styles.icons}>

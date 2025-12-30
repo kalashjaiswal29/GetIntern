@@ -289,7 +289,12 @@
 
 
 }
-
+@media(max-width:454px) {
+  .container {
+  margin-top: 5rem;
+  
+}
+}
 @media(max-width:343px){
   .qualityHead {
   

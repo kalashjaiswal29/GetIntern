@@ -393,8 +393,12 @@
   }
   .buttonGroup {
   margin-top: 1.5rem;
+
   
 }
+  .mainHero{
+    padding-block: 1rem;
+  }
 }
 
 @media(max-width:432px) {

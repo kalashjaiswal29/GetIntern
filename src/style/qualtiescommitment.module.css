@@ -267,6 +267,9 @@
     font-size: 1.89rem;
     font-weight: 600;
   }
+  .commitmentSubHead {
+  margin-top: 1rem;
+}
 }
 
 @media(max-width:575px){
@@ -294,6 +297,13 @@
   margin-top: 5rem;
   
 }
+  .commitmentSubHead {
+  margin-top: 0.6rem;
+}
+.commitmentHead {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
 }
 @media(max-width:343px){
   .qualityHead {

@@ -31,8 +31,8 @@ const NavRightEl = () => {
         );
       })}
     </div>
-    <div>
-      <img src={menuIcon}  alt="menu" className={styles.navRight2} />
+    <div className={styles.navRight2} >
+      <img src={menuIcon}  alt="menu" className={styles.menuImg}/>
     </div>
     </>
   );

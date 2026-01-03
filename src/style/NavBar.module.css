@@ -15,9 +15,13 @@
   margin: auto;
   width: 100%;
 }
+
+.menuImg{
+  height: 2.2912rem;
+}
 .navRight2{
   display: none;
-  height: 2.2912rem;
+  
 }
 .navBar {
   display: flex;
@@ -135,7 +139,7 @@
     display: none
   }
   .navRight2{
-  display:block;
+  display:inline-block;
 }
 
   .navBar {

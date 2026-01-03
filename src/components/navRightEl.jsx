@@ -1,5 +1,6 @@
 import styles from "../style/NavBar.module.css";
 import { Link } from "react-scroll";
+import menuIcon from '../assets/menus.png';
 
 const NavRightEl = () => {
   let navRight = [
@@ -11,7 +12,8 @@ const NavRightEl = () => {
   ];
 
   return (
-    <div className={styles.navRight}>
+    <>
+    <div className={styles.navRight1}>
       {navRight.map((item) => {
         return (
           <Link
@@ -29,6 +31,10 @@ const NavRightEl = () => {
         );
       })}
     </div>
+    <div>
+      <img src={menuIcon}  alt="menu" className={styles.navRight2} />
+    </div>
+    </>
   );
 };
 

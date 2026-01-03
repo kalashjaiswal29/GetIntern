@@ -37,3 +37,9 @@ img {
   }
 } */
 
+@media(max-width:455px) {
+  
+body{
+  padding-top: 3.769124rem;
+}
+}

@@ -15,7 +15,10 @@
   margin: auto;
   width: 100%;
 }
-
+.navRight2{
+  display: none;
+  height: 2.2912rem;
+}
 .navBar {
   display: flex;
   justify-content: space-between;
@@ -31,6 +34,9 @@
   /* width: 6.25rem; */
   height: 2.5rem;
   position: relative;
+}
+.logoM{
+  display: none;
 }
 
 .name {
@@ -52,7 +58,7 @@
   left: 12.1rem;
 }
 
-.navRight {
+.navRight1 {
   display: inline-flex;
   gap: 1.4456rem;
   text-wrap: wrap;
@@ -125,13 +131,17 @@
     left: 9.9rem;
   }
 
-  .navRight {
+  .navRight1 {
     display: none
   }
+  .navRight2{
+  display:block;
+}
 
   .navBar {
     max-width: 768px;
     margin-inline: auto;
+    
   }
   .navLine {
   height: 0.03rem;
@@ -155,4 +165,30 @@
   background-color: rgba(0, 0, 0, 0.150);
 }
 
+}
+@media(max-width:455px) {
+  .navRight2{
+  
+  height: 2rem;
+}
+  .logo{
+    display:none;
+  }
+  .logoM{
+    display:block;
+    /* height:3rem; */
+  }
+  .name{
+     font-family: "Quantico", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  }
+  .navBar{
+    background-color:  #ff850b0a;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  .navLine{
+    display: none;
+  }
 }

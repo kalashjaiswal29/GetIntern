@@ -110,3 +110,14 @@
 }
 
 }
+@media(max-width:455px) {
+  .subHead{
+    font-size: 0.92rem;
+  }
+  .firstSubHead{
+    font-size: 1rem;
+  }
+  .heading{
+  padding-bottom: 0rem;
+}
+}

@@ -145,7 +145,13 @@
 }
 
 }
+@media(max-width:700px){
+  .cardsContainer {
+  
+  row-gap: 1.5rem;
 
+}
+}
 @media(max-width:575px){
 .domainsContainer {
   

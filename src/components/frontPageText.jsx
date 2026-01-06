@@ -21,7 +21,7 @@ const FrontPageText = () => {
 
   return (
     <>
-      <span className={styles.mainHead}>
+      <h1 className={styles.mainHead}>
         {isNarrow ? (
           // 345px ya usse kam: single line (no <br>)
           "Get Internships That Build Your Future"
@@ -32,7 +32,7 @@ const FrontPageText = () => {
             Your Future
           </>
         )}
-      </span>
+      </h1>
 
       <p>
         <span className={styles.withText}>with </span>

@@ -22,7 +22,7 @@ const Verify = () => {
 
     // --- TIMEOUT LOGIC START ---
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 8000); // 8 seconds limit
+    const timeoutId = setTimeout(() => controller.abort(), 12000); // 8 seconds limit
     // --- TIMEOUT LOGIC END ---
 
     try {

@@ -25,6 +25,8 @@
   width: 27.1328rem;
   height: 9.452rem;
   display: flex;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /*New*/  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+
 }
 
 .iconBox {
@@ -125,6 +127,8 @@
     border-radius: 1rem;
     width: 100%;
     flex-direction: row;
+    
+
   }
 
   .iconBox {
@@ -146,4 +150,13 @@
   .cardSubHead {
     line-height: 1.6rem;
   }
+}
+
+
+
+
+.card:hover {/*New*/
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }

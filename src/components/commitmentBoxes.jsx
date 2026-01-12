@@ -1,15 +1,15 @@
 import styles from "../style/qualtiescommitment.module.css";
-import addFriend from "../assets/addFriend.png";
-import verify from "../assets/verify.png";
-import unprotected from "../assets/unprotected.png";
-import check from "../assets/check.png";
 
 const CommitmentBoxes = () => {
   return (
     <div className={styles.boxContainer}>
       <div className={styles.commitmentBox}>
         <div className={styles.commitBoxIcons}>
-          <img src={addFriend} alt="icon" className={styles.commitBoxIcon} />
+          <img
+            src="/images/addFriend.svg"
+            alt="icon"
+            className={styles.commitBoxIcon}
+          />
         </div>
         <div>
           <h4 className={styles.commitBoxHead}>
@@ -24,7 +24,11 @@ const CommitmentBoxes = () => {
 
       <div className={styles.commitmentBox}>
         <div className={styles.commitBoxIcons}>
-          <img src={verify} alt="icon" className={styles.commitBoxIcon} />
+          <img
+            src="/images/verify.svg"
+            alt="icon"
+            className={styles.commitBoxIcon}
+          />
         </div>
         <div>
           <h4 className={styles.commitBoxHead}>
@@ -39,7 +43,12 @@ const CommitmentBoxes = () => {
 
       <div className={styles.commitmentBox}>
         <div className={styles.commitBoxIcons}>
-          <img src={unprotected} alt="icon" className={styles.commitBoxIcon} />
+          <img
+            src="/images/unprotected.svg"
+            alt="icon"
+            loading="lazy"
+            className={styles.commitBoxIcon}
+          />
         </div>
         <div>
           <h4 className={styles.commitBoxHead}>
@@ -54,7 +63,12 @@ const CommitmentBoxes = () => {
 
       <div className={styles.commitmentBox}>
         <div className={styles.commitBoxIcons}>
-          <img src={check} alt="icon" className={styles.commitBoxIcon} />
+          <img
+            src="/images/check.svg"
+            alt="icon"
+            loading="lazy"
+            className={styles.commitBoxIcon}
+          />
         </div>
         <div>
           <h4 className={styles.commitBoxHead}>

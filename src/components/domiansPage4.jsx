@@ -1,50 +1,41 @@
 import styles from "../style/domains.module.css";
-import code from "../assets/code.png";
-import cpu from "../assets/cpu.png";
-import diagram from "../assets/diagram.png";
-import cloud from "../assets/cloud.png";
-import brain from "../assets/brain.png";
-import terminal from "../assets/terminal.png";
-import tool from "../assets/tool.png";
-import megaPhone from "../assets/megaphone.png";
-import shield from "../assets/shield.png";
-
+import {Link} from "react-router-dom"
 const Domains = () => {
   const cardsContent = [
     {
-      img: code,
+      img: "/images/code.svg",
       title: "Web Development",
     },
     {
-      img: diagram,
+      img: "/images/diagram.svg",
       title: "Data Science",
     },
     {
-      img: brain,
+      img: "/images/brain.svg",
       title: "Machine Learning",
     },
     {
-      img: shield,
+      img: "/images/shield.svg",
       title: "Cybersecurity",
     },
     {
-      img: megaPhone,
+      img: "/images/megaphone.svg",
       title: "Digital Marketing",
     },
     {
-      img: terminal,
+      img: "/images/terminal.svg",
       title: "Python Programming",
     },
     {
-      img: tool,
+      img: "/images/tool.svg",
       title: "UI/UX",
     },
     {
-      img: cloud,
+      img: "/images/cloud.svg",
       title: "Cloud Computing",
     },
     {
-      img: cpu,
+      img: "/images/cpu.svg",
       title: "VLSI",
     },
   ];
@@ -62,12 +53,19 @@ const Domains = () => {
         <div className={styles.cardsContainer}>
           {cardsContent.map(({ img, title }) => {
             return (
+              <Link to="/apply">
               <li className={styles.card} key={title}>
                 <div className={styles.iconCircle}>
-                  <img className={styles.img} src={img} alt="icon" />
+                  <img
+                    className={styles.img}
+                    src={img}
+                    alt="icon"
+                    loading="lazy"
+                  />
                 </div>
                 <h2 className={styles.cardTitle}>{title}</h2>
               </li>
+              </Link>
             );
           })}
         </div>

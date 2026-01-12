@@ -74,14 +74,13 @@
   cursor: pointer;
 }
 
-.applybutton {
+.applyButton {
   background-color: #0A59CD;
   color: #FFFFFF;
-  
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.applybutton:hover {
+.applyButton:hover {
   transform: scale(1.03);
   /* small zoom */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);

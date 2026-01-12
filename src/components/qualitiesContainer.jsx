@@ -1,17 +1,13 @@
 import styles from "../style/qualtiescommitment.module.css";
 
-import clipboard from "../assets/clipboard.png";
-import badge from "../assets/badge.png";
-import thumbsUp from "../assets/thumbs-up.png";
-import wifi from "../assets/wifi.png";
-
 const QualtiesContainer = () => {
   return (
     <div className={styles.qualitiesContainer}>
       <div className={styles.qualityItem}>
         <div className={styles.orangeCircle}>
           <img
-            src={clipboard}
+            src="/images/clipboard.svg"
+            loading="lazy"
             className={`${styles.icons} ${styles.tasks}`}
             alt="tasks"
           />
@@ -24,7 +20,12 @@ const QualtiesContainer = () => {
       <div className={styles.qualityItem}>
         <div className={styles.orangeCircle}>
           {" "}
-          <img src={wifi} className={styles.icons} alt="tasks" />
+          <img
+            src="/images/wifi.svg"
+            loading="lazy"
+            className={styles.icons}
+            alt="tasks"
+          />
         </div>
         <h3 className={styles.qualityHead}>Flexible & Online</h3>
         <p className={styles.qualitySubHead}>
@@ -35,7 +36,12 @@ const QualtiesContainer = () => {
       <div className={styles.qualityItem}>
         <div className={styles.orangeCircle}>
           {" "}
-          <img src={badge} className={styles.icons} alt="tasks" />
+          <img
+            src="/images/badge.svg"
+            loading="lazy"
+            className={styles.icons}
+            alt="tasks"
+          />
         </div>
         <h3 className={styles.qualityHead}>Certificate Provided</h3>
         <p className={styles.qualitySubHead}>
@@ -46,7 +52,12 @@ const QualtiesContainer = () => {
       <div className={styles.qualityItem}>
         <div className={styles.orangeCircle}>
           {" "}
-          <img src={thumbsUp} className={styles.icons} alt="tasks" />
+          <img
+            src="/images/thumbs-up.svg"
+            loading="lazy"
+            className={styles.icons}
+            alt="tasks"
+          />
         </div>
         <h3 className={styles.qualityHead}>Beginner Friendly</h3>
         <p className={styles.qualitySubHead}>

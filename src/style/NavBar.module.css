@@ -47,19 +47,30 @@
   align-items: center;
   max-width: 1270px;
   padding-inline: 1.946rem;
-  margin: auto
+  margin: auto ;
+  height: 5.6rem;
 }
 
 .logo {
-  display: inline-block;
-  margin: 0.8rem 0rem 2.30rem 0rem;
+  display: inline-flex;
+  align-items: center;
+  /* margin: 0.8rem 0rem 0rem 0rem; */
   /* width: 6.25rem; */
-  height: 2.5rem;
+  /* height: 2.5rem; */
   position: relative;
+  height: 5.6rem;
 }
 .logoM{
   display: none;
+   height: 2.891rem;
+  width: 2.891rem;
 }
+
+.logoM img{
+  height: 100%;
+}
+
+
 
 .name {
   font-family: "Poppins", sans-serif;
@@ -76,8 +87,8 @@
   color: #0A59CD;
   font-size: 1.112rem;
   position: absolute;
-  top: 1.32rem;
-  left: 12.1rem;
+  top: 1.98rem;
+  left: 15.55rem;
 }
 
 .navRight1 {
@@ -155,13 +166,14 @@
   .name {
     font-size: 2.62rem;
     line-height: 4.3368rem;
+    margin-left: -4px;
   }
 
 
   .tm {
     font-size: 1.1rem;
-    top: 1.38rem;
-    left: 10.8rem;
+    left: 14.04rem; 
+    top: 2.04rem;
   }
 
   .li {
@@ -181,8 +193,8 @@
 
   .tm {
     font-size: 0.98rem;
-    top: 1.44rem;
-    left: 9.9rem;
+    top: 2.14rem;
+    left: 13.19rem;
   }
 
   .navRight1 {
@@ -223,21 +235,33 @@
 }
 @media(max-width:455px) {
   .navRight2{
-  
   height: 2rem;
 }
   .logo{
     display:none;
   }
   .logoM{
-    display:block;
-    /* height:3rem; */
+    display:inline-block  ;
+    height:2.1rem;
+    /* height: 90%; */
+    width: 2.5rem;
+    /* width: 80%; */
+
   }
   .name{
      font-family: "Quantico", sans-serif;
   font-weight: 700;
   font-style: normal;
   }
+.crossDeactiveImg{
+  top: 1.3rem;
+}
+.nav{
+  height: 4.3rem;
+}
+.navBar{
+  height: 100%;
+}
 
   .navLine{
     display: none;
@@ -248,5 +272,5 @@
 
 }
 
-
 }
+

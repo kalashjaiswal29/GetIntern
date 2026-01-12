@@ -1,43 +1,65 @@
 import styles from "../style/services.module.css";
-import webd from "../assets/webd.png";
-import appd from "../assets/appd.png";
 
 const Services = () => {
-  const cards = [
+  const cardsContent = [
     {
-      icon: webd,
+      icon: "/images/webd.svg",
       heading: "Web Development",
       subHead: "Modern, fast, responsive websites.",
-      className: styles.icon
+      iconClass: styles.icon, // Rename kiya taaki confusion na ho
     },
     {
-      icon:appd,
+      icon: "/images/appd.svg",
       heading: "App Development",
       subHead: "Build custom Android & web apps.",
-      className: styles.appIcon
+      iconClass: styles.appIcon,
     },
   ];
+
+  const getMailtoLink = (title) => {
+    const email = "contact@getintern.in";
+    const subject = encodeURIComponent(`Interested in ${title} Service`);
+    const body = encodeURIComponent(`Hi GetIntern,\n\nI am interested in your ${title} services. Please contact me.\n\nThanks!`);
+    return `mailto:${email}?subject=${subject}&body=${body}`;
+  };
+
   return (
-    <div className={styles.servicesContainer}>
-      <h1 className={styles.heading}>Our Services</h1>
+    <section className={styles.servicesContainer}> {/* CSS ke hisab se rename kiya */}
+      <h2 className={styles.heading}>
+        <span >Our Services</span>
+      </h2>
+      
       <div className={styles.cardsContainer}>
-        {cards.map(({ icon, heading, subHead,className }) => {
+        {cardsContent.map(({ icon, heading, subHead, iconClass }) => {
           return (
-            <li className={styles.card} key={heading} >
-              <div className={styles.iconBox}>
-                <img src={icon} className={className} alt={icon} />
+            <a 
+              href={getMailtoLink(heading)} 
+              key={heading} 
+              className={styles.cardLink}
+            >
+              <div className={styles.card}>
+                {/* Left Side: Icon Box */}
+                <div className={styles.iconBox}>
+                  <img
+                    className={iconClass} // styles.icon ya styles.appIcon yahan aayega
+                    src={icon}
+                    alt={heading}
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Right Side: Content */}
+                <div className={styles.cardContent}>
+                  <h2 className={styles.cardHead}>{heading}</h2>
+                  <p className={styles.cardSubHead}>{subHead}</p>
+                </div>
               </div>
-              <div className={styles.cardContent}>
-                <h2 className={styles.cardHead}>{heading}</h2>
-                <p className={styles.cardSubHead}>
-                  {subHead}
-                </p>
-              </div>
-            </li>
+            </a>
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
+
 export default Services;

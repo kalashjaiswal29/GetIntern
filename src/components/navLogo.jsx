@@ -4,13 +4,13 @@ const NavLogo = () => {
   return (
     <>
       <div className={styles.logo}>
-        {/* <p> */}
+        {/* <p> */}<span><img style={{height:"2.4rem"}} src="/GI_Logo.png" alt="logoM" /></span>&nbsp;&nbsp;&nbsp;&nbsp;
         <span className={styles.name}>GetIntern</span>
         <span className={styles.tm}>™</span>
         {/* </p> */}
       </div>
       <div className={styles.logoM}>
-        <span className={styles.name}>GI</span>
+        <img src="/GI_Logo.png" alt="logoM" />
       </div>
     </>
   );

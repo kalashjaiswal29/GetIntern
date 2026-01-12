@@ -1,24 +1,23 @@
 import styles from "../style/mainHero.module.css";
-import graduateGirlwithCap from "../assets/graduateGirlwithCap.jpg";
-import employeeMentee from "../assets/employeeMentee.jpg";
-import mentorMentee from "../assets/mentorMentee.jpg";
-
 const ImageCollage = () => {
   return (
     <div className={styles.grid}>
       <img
-        src={mentorMentee}
+        src="/images/mentorMentee.webp"
+        loading="lazy"
         className={styles.mentorMentee}
         alt="mentorMentee"
       />
 
       <img
-        src={graduateGirlwithCap}
+        src="/images/graduateGirlwithCap.webp"
+        loading="lazy"
         className={styles.graduateGirlwithCap}
         alt="graduateGirlwithCap"
       />
       <img
-        src={employeeMentee}
+        src="/images/employeeMentee.webp"
+        loading="lazy"
         className={styles.employeeMentee}
         alt="employeeMentee"
       />

@@ -1,10 +1,5 @@
 import styles from "../style/footer.module.css";
 
-import insta from "../assets/instagram.png";
-import linkedin from "../assets/linkedin.png";
-import facebook from "../assets/facebook.png";
-import twitter from "../assets/twitter.png";
-
 const Footer = () => {
   return (
     <footer className={styles.footerSection}>
@@ -21,35 +16,74 @@ const Footer = () => {
           <span>Services</span>
           <span>Domains</span>
           <span>FAQs</span>
-          
         </span>
         <span className={styles.footer4}>
           <span>
             Email -{" "}
-            <a href="mailto:contact@getintern.ac.in" className={styles.footer4_5}>contact@getintern.ac.in</a>
+            <a
+              href="mailto:contact@getintern.in"
+              className={styles.footer4_5}
+            >
+              contact@getintern.in
+            </a>
           </span>
           <span className={styles.call}>
-            <span>📞 <a href="tel:+916006312288">+91 6006312288</a></span><span className={styles.divider}>|</span><span>📞 <a href="tel:+917905891176">+91 7905891176</a></span>
+            <span>
+              📞 <a href="tel:+916006312288">+91 6006312288</a>
+            </span>
+            <span className={styles.divider}>|</span>
+            <span>
+              📞 <a href="tel:+917905891176">+91 7905891176</a>
+            </span>
           </span>
         </span>
         <div className={styles.icons}>
+          <a href="https://www.facebook.com/profile.php?id=61586402463502&mibextid=rS40aB7S9Ucbxw6v" target="_main">
           <div className={styles.iconBorder}>
-            <img src={facebook} alt="insta" className={styles.facebook} />
+            <img
+              src="/images/facebook.svg"
+              alt="insta"
+              className={styles.facebook}
+            />
           </div>
-
+          </a>
+    <a href="https://www.instagram.com/getinternhq?igsh=ZzUzZ3NpcjN3bDZy&utm_source=ig_contact_invite" target="_main">
           <div className={styles.iconBorder}>
-            <img src={insta} alt="insta" className={styles.icon} />
+            <img
+              src="/images/instagram.svg"
+              alt="insta"
+              loading="lazy"
+              className={styles.icon}
+            />
+            
           </div>
+          </a>
+          
+          <a href="https://www.linkedin.com/company/getintern/"  target="_main">
           <div className={styles.iconBorder}>
-            <img src={twitter} alt="insta" className={styles.icon} />
+            <img
+              src="/images/linkedin.svg"
+              alt="insta"
+              loading="lazy"
+              className={styles.icon}
+            />
           </div>
+          </a>
+          <a href="https://whatsapp.com/channel/0029Vb7Lp7f90x2w8MBlPV44"  target="_main">
           <div className={styles.iconBorder}>
-            <img src={linkedin} alt="insta" className={styles.icon} />
+            <img
+              src="/images/whatsapp.svg"
+              alt="insta"
+              loading="lazy"
+              className={styles.icon}
+            />
           </div>
+          </a>  
         </div>
         <div className={styles.copyWright}>
           <p className={styles.line1}>
-            <span>Copyright © 2025 GetIntern™.</span> <span className={styles.rights}>All rights reserved.</span>
+            <span>Copyright © 2025 GetIntern™.</span>{" "}
+            <span className={styles.rights}>All rights reserved.</span>
           </p>
           <p className={styles.line2}>
             <i>Built with passion at GetIntern™</i>

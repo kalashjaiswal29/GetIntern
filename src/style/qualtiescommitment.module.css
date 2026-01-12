@@ -270,6 +270,10 @@
   .commitmentSubHead {
   margin-top: 1rem;
 }
+.container {
+  max-width: 576px;
+}
+
 }
 
 @media(max-width:575px){

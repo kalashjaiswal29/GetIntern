@@ -43,3 +43,10 @@ body{
   padding-top: 3.769124rem;
 }
 }
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none; /* Underline hatane ke liye */
+  color: inherit;        /* Parent element ka color lene ke liye */
+  outline: none;        
+   /* Click karne par aane wala border hatane ke liye */
+}

@@ -1,8 +1,6 @@
 import styles from "../style/mainHero.module.css";
 import FrontPageBtns from "./frontPageButtons";
 import FrontPageText from "./frontPageText";
-
-import cap1 from "../assets/cap 1.png";
 import ImageCollage from "./imageCollage";
 
 const FrontPage = () => {
@@ -14,7 +12,7 @@ const FrontPage = () => {
       </div>
       <div className={styles.imageCollage}>
         <ImageCollage />
-        <img src={cap1} className={styles.cap} alt="capPNG" />
+        <img src="/images/cap 1.png" className={styles.cap} loading="lazy" alt="capPNG" />
       </div>
     </div>
   );

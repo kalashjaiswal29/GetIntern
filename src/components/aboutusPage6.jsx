@@ -1,5 +1,5 @@
 import styles from "../style/aboutUs.module.css";
-import img from "../assets/im.avif";
+
 
 const AboutUS = () => {
   return (
@@ -22,7 +22,7 @@ const AboutUS = () => {
             environment.
           </p>
         </div>
-        <img className={styles.img} src={img} alt="girlWithLaptop" />
+        <img className={styles.img} src="/images/im.avif" loading="lazy" alt="girlWithLaptop" />
       </div>
     </section>
   );

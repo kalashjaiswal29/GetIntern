@@ -1,0 +1,345 @@
+.verifyContainer{
+  max-width: 1270px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 1rem;
+  min-height: 90vh;
+  padding-top: 4rem;
+}
+.enterid{
+  font-size: 1.3rem;
+  font-family: "Montserret",sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: inherit !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+.chat{
+  color: rgb(35, 217, 35);
+
+}
+.chat:hover{
+  color: rgb(11, 110, 11);
+
+ 
+}
+.chat:hover svg{
+  fill: rgb(11, 110, 11);
+  transform: scale(1.1)
+}
+.verifyHeading{
+  font-family:  "Montserrat", sans-serif;
+  font-size: 3rem;
+  color: #0b1f3a;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.formDiv {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  border: solid 1px #FE8409;
+  border-radius: 9999px;
+  overflow: hidden;
+  
+  /* Changed fixed 34rem to a percentage with a max-width */
+  width: 100%; 
+  max-width: 34rem; 
+  
+  height: 4rem;
+  background-color: #ffab5709;
+  margin-top: 0.9rem;
+  transition: all 0.3s ease-in-out;
+}
+/* Hover effect for that 'Sexy' interactive feel */
+.formDiv:hover {
+  transform: translateY(-2px); /* Halki si lift */
+}
+.verifyInput{
+  height: 100%;
+  margin: 0;
+  width: 82%;
+  border: none;
+  
+
+  margin-block: auto  ;
+  font-size: 1.3rem;
+  padding-inline: 1.8rem;
+  background-color: transparent;
+  
+}
+.verifyInput:focus{
+  outline :none;
+  background-color: transparent;
+}
+input:active{
+  outline :none;
+  background-color: transparent;
+  
+}
+
+.verifyBtn{
+  height:100%;
+  width: 18% ;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  
+}
+
+.verifyBtn :active{
+  border: none 
+}
+.verifyBtn > img {
+  height: 50%;
+  margin-inline: auto;
+  
+}
+.verifying{
+  font-size : 1.2rem;
+}
+
+.homeBtn{
+  padding: 0rem 1.112rem 0rem 1.112rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  border-radius: 9999px;
+  line-height: 2.8912rem;
+  background-color: #f98007;
+  color: #FFFFFF;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1.6rem;
+}
+.homeBtn:hover {
+  transform: translateY(-1.5px); /* Halki si lift */
+ box-shadow: 0 0 8px rgba(254, 132, 9, 0.4);
+  cursor: pointer;
+}
+
+
+ /* --- The Sexy Result Card --- */
+.resultCard {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.08);
+  border: 1px solid rgba(254, 132, 9, 0.15);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  animation: slideUp 0.5s ease-out;
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  background: #ecfdf5;
+  color: #10b981;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.checkIcon {
+  background: #10b981;
+  color: white;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 8px;
+  font-size: 10px;
+}
+
+.successTitle {
+  color: #0b1f3a;
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.idLabel {
+  color: #FE8409;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+/* --- Responsive Key-Value Grid --- */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.infoLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.infoValue {
+  font-size: 1rem;
+  color: #0b1f3a;
+  font-weight: 500;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.actionArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.tryAgainLink {
+  background: none;
+  border: none;
+  color: #64748b;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tryAgainLink:hover {
+  color: #FE8409;
+}
+
+.errorContainer {
+  margin-bottom: 1.5rem;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Card ke andar footer area */
+.cardFooter {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Fail hone par actions area */
+.failureActions {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+
+ @media (max-width: 950px) {
+  .verifyHeading{
+  font-size: 2.8rem;
+  
+}
+ }
+
+  @media (max-width: 800px) {
+  .verifyHeading{
+  font-size: 2.6rem;
+  
+}
+ }
+ 
+  @media (max-width: 620px) {
+  .verifyHeading{
+  font-size: 2.3rem;
+  
+}
+.enterid{
+  font-size: 1rem;
+  font-weight: 300;
+}
+ }
+@media(max-width:455px) {
+  .verifyContainer{
+    padding-top: 3.7252rem;
+  }
+}
+  
+  @media (max-width: 500px) {
+  .verifyHeading{
+  font-size: 1.92rem;
+  font-weight: 500;
+  
+}
+  .formDiv {
+    height: 3.5rem; /* Slightly shorter on mobile */
+  }
+  
+  .verifyInput {
+    font-size: 1rem; /* Smaller text for small screens */
+    padding-inline: 1rem;
+  }
+  
+  .verifyBtn > img {
+    height: 40%; /* Scale down the icon slightly */
+  }
+  .verifying{
+  font-size : 1rem;
+}
+.homeBtn{
+  padding: 0rem 1rem 0rem 1rem;
+  font-size: 0.9rem;
+  line-height: 2.6912rem;
+
+
+   
+}
+  .resultCard {
+    padding: 1.5rem 1rem;
+  }
+  
+  .infoGrid {
+    grid-template-columns: 1fr; /* Stack on small screens */
+    gap: 1rem;
+  }
+
+  .successTitle {
+    font-size: 1.25rem;
+  }
+ }

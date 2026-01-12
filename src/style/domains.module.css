@@ -131,6 +131,8 @@
   justify-content: space-evenly;
   column-gap: 1rem;
   row-gap: 3.5rem;
+  max-width: 768px;
+  margin-inline: auto;
 
 }
 
@@ -144,6 +146,14 @@
   
 }
 
+}
+
+
+@media(max-width:767px) {
+  .cardsContainer {
+    max-width: 576px;
+    margin-inline: auto;
+  }
 }
 @media(max-width:700px){
   .cardsContainer {
@@ -165,4 +175,9 @@
 } 
 
 
+}
+.cardsContainer a {
+  text-decoration: none;
+  color: unset;
+  display: contents; /* Yeh link ko layout se 'gayab' kar deta hai par click rehta hai */
 }

@@ -1,5 +1,4 @@
 import styles from "../style/qualtiescommitment.module.css";
-import triangularIMG from "../assets/triangularIMG.png";
 
 import CommitmentBoxes from "./commitmentBoxes.jsx";
 
@@ -14,8 +13,9 @@ const CommitmentContainer = () => {
       </pre>
       <CommitmentBoxes />
       <img
-        src={triangularIMG}
+        src="/images/triangularIMG.webp"
         className={styles.triangularIMG}
+        loading="lazy"
         alt="Triangular"
       />
     </>

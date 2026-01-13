@@ -67,7 +67,7 @@ const ApplyForm = () => {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbyrKTpbe0XlCEzkbcpMIEMQ9fBqk59ibqq2qGSaEgqaPfD2L6sr3VjN-bu4GA83LWbtnQ/exec",
+        "https://script.google.com/macros/s/AKfycbxZm5-bJbSI5ggCNFDqpqDy4Ncp6Yhjh_yHmXM8sU6sdz72YI-_zSa9MSxFe38Q2-N9kQ/exec",
         { method: "POST", mode: "no-cors", body: formData }
       );
       setFetchStatus(false);

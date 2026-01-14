@@ -52,6 +52,7 @@ const ApplyForm = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // ✅ UPDATED handleApplySubmit (CORS COMPATIBLE)
   const handleApplySubmit = async (e) => {
     e.preventDefault();
     if (!selectedDomain) {
@@ -66,25 +67,44 @@ const ApplyForm = () => {
     setFetchStatus(true);
 
     try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbxZm5-bJbSI5ggCNFDqpqDy4Ncp6Yhjh_yHmXM8sU6sdz72YI-_zSa9MSxFe38Q2-N9kQ/exec",
-        { method: "POST", mode: "no-cors", body: formData }
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbznsytIop8AwReveTJ8PZrdzSiluUTGcqAfDg5NySVVwpF4PxQYk7RW3sA7EB00209h_w/exec",
+        { 
+          method: "POST", 
+          body: formData,
+          // ✅ mode: "no-cors" hata diya gaya hai
+          redirect: "follow" // Google's 302 redirect ko allow karne ke liye
+        }
       );
+
+      // ✅ Response read karna shuru
+      const result = await response.json();
+
       setFetchStatus(false);
-      formElement.reset();
-      setSelectedDomain("");
-      toast.success("Application submitted successfully!", {
-        id: toastId,
-        duration: 3000,
-        className: styles.myToast,
-      });
-      setTimeout(() => navigate("/"), 3000);
+
+      if (result.success) {
+        formElement.reset();
+        setSelectedDomain("");
+        toast.success(result.message || "Application submitted successfully!", {
+          id: toastId,
+          duration: 3000,
+          className: styles.myToast,
+        });
+        setTimeout(() => navigate("/"), 3000);
+      } else {
+        // Backend se aane wala specific error message (e.g., "Daily limit reached")
+        toast.error(result.message || "Submission failed", {
+          id: toastId,
+          className: styles.myToast,
+        });
+      }
     } catch (err) {
       setFetchStatus(false);
-      toast.error("❌ Submission failed. Please check connection.", {
+      toast.error("❌ Network error. Please try again later.", {
         id: toastId,
         className: styles.myToast,
       });
+      console.error("Submission Error:", err);
     }
   };
 
@@ -169,7 +189,7 @@ const ApplyForm = () => {
           <p>Task-based learning, not fake internships</p>
           <p>Open for all students & freshers</p>
         </div>
-        <h5 className={styles.intro} >
+        <h5 className={styles.intro}>
           Real-world, task-based internships designed to build industry-ready
           skills
         </h5>
@@ -177,13 +197,11 @@ const ApplyForm = () => {
           Applications are reviewed manually. Selected candidates will receive
           tasks and onboarding details via email.
         </p>
-    </section>
-        
-      
+      </section>
+
       <div className={styles.formWrapper}>
         <form onSubmit={handleApplySubmit} className={styles.applyForm}>
           <section className={styles.sectionCard}>
-        
             <h3 className={styles.h3}>Personal Details</h3>
             <label className={styles.fieldLabel}>
               <div>Name</div>
@@ -311,6 +329,15 @@ const ApplyForm = () => {
                 </label>
               ))}
             </div>
+            <input
+              type="text"
+              name="company"
+              style={{ display: "none" }}
+              tabIndex="-1"
+              autoComplete="off"
+            />
+            <input type="hidden" name="form_loaded_at" value={Date.now()} />
+
           </section>
 
           <section className={styles.sectionCard}>

@@ -2,10 +2,14 @@ import styles from "../style/mainHero.module.css";
 import FrontPageBtns from "./frontPageButtons";
 import FrontPageText from "./frontPageText";
 import ImageCollage from "./imageCollage";
+import ScrollToTop from "./scrollTop";
 
 const FrontPage = () => {
   return (
     <div className={styles.mainHero}>
+      <ScrollToTop/>
+
+
       <div className={styles.textMain}>
         <FrontPageText />
         <FrontPageBtns />

@@ -9,82 +9,97 @@
   top: 0rem;
   left: 0rem;
   right: 0rem;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   z-index: 100;
   align-self: center;
   margin: auto;
   width: 100%;
 }
 
-.menuActiveImg{
+.menuActiveImg {
   height: 2.2912rem;
   display: inline-block;
 }
-.menuDeactiveImg{
+
+.menuDeactiveImg {
   height: 2.2912rem;
-  display:none;
-  
-}
-.crossActiveImg{
-  height: 2.2912rem;
-  display:none;
-}
-.crossDeactiveImg{
-  height: 1.8rem;
-  display:inline-block;
-  position: absolute;
-  right: 1.4rem;
-  top: 1.9rem;
+  display: none;
 }
 
-.navRight2{
-  display: none;
-  
+.crossActiveImg {
+  position: fixed;
+  top: 1.9rem;
+  right: 1.4rem;
+  height: 1.8rem;
+  display: inline-block;
+  z-index: 10003; /* sabse upar */
 }
+
+.crossDeactiveImg {
+  display: none;
+}
+.navRight2 {
+  display: none;
+  z-index: 10002;   /* menu se zyada */
+  position: relative;
+}
+
 .navBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1270px;
   padding-inline: 1.946rem;
-  margin: auto ;
+  margin: auto;
   height: 5.6rem;
 }
 
 .logo {
   display: inline-flex;
   align-items: center;
-  /* margin: 0.8rem 0rem 0rem 0rem; */
-  /* width: 6.25rem; */
-  /* height: 2.5rem; */
   position: relative;
   height: 5.6rem;
 }
-.logoM{
+/* Overlay - Menu ke peeche aur content ke upar */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2); /* Halka sa dark effect professional lagta hai */
+  backdrop-filter: blur(2px); /* Glassmorphism touch */
+  z-index: 10000; /* navRightHam (10001) se peeche */
   display: none;
-   height: 2.891rem;
+}
+
+.overlayActive {
+  display: block;
+}
+
+.logoM {
+  display: none;
+  height: 2.891rem;
   width: 2.891rem;
 }
 
-.logoM img{
+.logoM img {
   height: 100%;
 }
-
-
 
 .name {
   font-family: "Poppins", sans-serif;
   font-size: 2.891rem;
   letter-spacing: -0.14456rem;
   font-weight: 500;
-  color: #0B1F3A;
+  color: #0b1f3a;
   line-height: 4.3368rem;
 }
 
 .tm {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
-  color: #0A59CD;
+  color: #0a59cd;
   font-size: 1.112rem;
   position: absolute;
   top: 1.98rem;
@@ -95,6 +110,19 @@
   display: inline-flex;
   gap: 1.4456rem;
   text-wrap: wrap;
+}
+
+/* Link Wrapper */
+.navLink {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* Active State for JS Integration */
+.navLink.activeLi .li {
+  background-color: #fe8409 !important;
+  color: #ffffff !important;
+  border-radius: 1.112rem;
 }
 
 .li {
@@ -112,19 +140,11 @@
     box-shadow 150ms ease;
 }
 
-.activeLi {
-  background-color: #FE8409;
-  color: #FFFFFF;
-  border-radius: 1.112rem;
-}
-
-
 .li:hover {
   cursor: pointer;
-  background-color: #FE8409;
-  color: #FFFFFF;
+  background-color: #fe8409;
+  color: #ffffff;
 }
-
 
 .navRightHam {
   display: flex;
@@ -132,145 +152,125 @@
   position: absolute;
   top: 5.8rem;
   right: 0;
-
-  background-color:#f8f5f2
- ;
- /* updated */
+  background-color: #f8f5f2;
   box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem 0 0 0.5rem;
   padding: 1rem 1.5rem;
   gap: 1rem;
-  z-index: 101;
+  z-index: 10001;
   text-align: center;
-
-  /* Start hidden (outside screen) */
   transform: translateX(110%);
   visibility: hidden;
-
-  /* Smooth slide only */
-  transition: transform 0.7s ease-in-out, visibility 0.7s ease-in-out;
+  transition:
+    transform 0.7s ease-in-out,
+    visibility 0.7s ease-in-out;
 }
 
-/* Open state */
 .navOpen {
   transform: translateX(0);
   visibility: visible;
 }
 
+/* MEDIA QUERIES - ALL YOUR ORIGINAL PADDING/SHADOWS */
 
-@media(max-width:1240px) {
+@media (max-width: 1240px) {
   .navBar {
     max-width: 1000px;
   }
-
   .name {
     font-size: 2.62rem;
     line-height: 4.3368rem;
     margin-left: -4px;
   }
-
-
   .tm {
     font-size: 1.1rem;
-    left: 14.04rem; 
+    left: 14.04rem;
     top: 2.04rem;
   }
-
   .li {
     padding: 0rem 0.8596rem 0rem 0.8596rem;
     font-family: "Inter", sans-serif;
     font-size: 1.078488rem;
     border-radius: 0.97856rem;
   }
-
 }
 
-@media(max-width:998px) {
+@media (max-width: 998px) {
   .name {
     font-size: 2.42rem;
     line-height: 4.2368rem;
   }
-
   .tm {
     font-size: 0.98rem;
     top: 2.14rem;
     left: 13.19rem;
   }
-
   .navRight1 {
-    display: none
+    display: none;
   }
-  .navRight2{
-  display:inline-block;
-}
-  .navBar{
-    
-                  max-width: 768px;
+  .navRight2 {
+    display: inline-block !important;;
+    position: relative;
+  }
+  .navBar {
+    max-width: 768px;
     margin-inline: auto;
-    
   }
-  .nav{
-    background-color:  #f8f5f2;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  .nav {
+    background-color: #f8f5f2;
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
   .navLine {
-  display: none;
-}
+    display: none;
+  }
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
   .navBar {
     max-width: 576px;
     margin-inline: auto;
   }
 }
 
-@media(max-width:575px) {
+@media (max-width: 575px) {
   .navBar {
     padding-inline: 1rem;
   }
-    
-
 }
-@media(max-width:455px) {
-  .navRight2{
-  height: 2rem;
-}
-  .logo{
-    display:none;
-  }
-  .logoM{
-    display:inline-block  ;
-    height:2.1rem;
-    /* height: 90%; */
-    width: 2.5rem;
-    /* width: 80%; */
 
-  }
-  .name{
-     font-family: "Quantico", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  }
-.crossDeactiveImg{
+@media (max-width: 455px) {
+  .crossActiveImg{
   top: 1.3rem;
 }
-.nav{
-  height: 4.3rem;
-}
-.navBar{
-  height: 100%;
-}
-
-  .navLine{
+  .navRight2 {
+    height: 2rem;
+  }
+  .logo {
     display: none;
   }
-  
-.navRightHam {
-  top: 4.6rem;
-
+  .logoM {
+    display: inline-block;
+    margin-top: 0.18rem;
+    height: 2.1rem;
+    width: 2.5rem;
+  }
+  .name {
+    font-family: "Quantico", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .nav {
+    height: 4.3rem;
+  }
+  .navBar {
+    height: 100%;
+  }
+  .navLine {
+    display: none;
+  }
+  .navRightHam {
+    top: 4.6rem;
+  }
 }
-
-}
-

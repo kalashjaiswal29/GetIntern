@@ -16,9 +16,14 @@ const MainSec = () => {
       <ScrollToTop />
       <section id="heroSection">
         <HeroSection />
+        </section>
+        <section id="commitmentSection">
         <QualtiesCommitment />
+        </section>
+        <section id="stepsSection">
         <StartYourJourney />
-      </section>
+        </section>
+      
 
       <section id="domainsSection">
         <Domians />

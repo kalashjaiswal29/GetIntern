@@ -1,0 +1,153 @@
+.popupContainer {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  background: rgba(254, 132, 9, 0.08); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  padding: 0.6rem 1.4rem 0.6rem 0.6rem;
+  border-radius: 4rem; 
+  border: 1px solid rgba(254, 132, 9, 0.2);
+  box-shadow: 0 10px 40px rgba(11, 31, 58, 0.08);
+  cursor: pointer;
+  
+  /* FIX: translate3d for hardware acceleration */
+  transform: translate3d(180%, 0, 0);
+  /* FIX: Added will-change for pre-rendering */
+  will-change: transform;
+  /* FIX: 1.5s slow ease-in-out curve */
+  transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popupActive {
+  transform: translate3d(0, 0, 0);
+}
+
+.iconWrapper {
+  background-color: #fe8409;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(254, 132, 9, 0.2);
+}
+
+.iconWrapper img {
+  width: 1.4rem;
+  height: 1.4rem;
+  filter: brightness(0) invert(1);
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.topText {
+  font-family: "Inter", sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fe8409;
+  font-weight: 700;
+  margin: 0;
+}
+
+.mainText {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0b1f3a;
+  margin: 0;
+  line-height: 1.2;
+}
+/* ... baki ka CSS wahi rahega ... */
+/* ... Desktop code (pichla wala hi rahega) ... */
+
+/* --- Tablet Responsive (768px to 1024px) --- */
+@media (max-width: 1024px) and (min-width: 456px) {
+  .popupContainer {
+    bottom: 1.8rem;
+    right: 1.8rem;
+    padding: 0.55rem 1.3rem 0.55rem 0.55rem;
+    gap: 0.9rem;
+  }
+
+  .iconWrapper {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .mainText {
+    font-size: 0.95rem; /* Desktop se thoda chota, mobile se bada */
+  }
+}
+
+/* --- Mobile Responsive (Up to 455px) --- */
+@media (max-width: 455px) {
+  .popupContainer {
+    bottom: 1.2rem;
+    right: 1.2rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    gap: 0.6rem;
+    max-width: 85vw; 
+  }
+
+  .iconWrapper {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .iconWrapper img {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .mainText {
+    font-size: 0.85rem;
+  }
+
+  .topText {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 455px) {
+  .popupContainer {
+    /* Mobile par thoda chota margins */
+    bottom: 1.2rem;
+    right: 1.2rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    gap: 0.6rem;
+    /* Taki phone par bahut zyada jagah na le */
+    max-width: 85vw; 
+  }
+
+  .iconWrapper {
+    /* Footer style icon - small size for mobile */
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .iconWrapper img {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .mainText {
+    font-size: 0.85rem; /* Perfect readability on phones */
+  }
+
+  .topText {
+    font-size: 0.6rem;
+  }
+}

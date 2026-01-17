@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
-import loaderAnimation from "../assets/verifyloader.json";
 import styles from "../style/verify.module.css";
+import ScrollToTop from "./scrollTop"
 
 const Verify = () => {
   const [result, setResult] = useState(null);
   const [verifyDone, setVerifyDone] = useState(false);
   const [loading, setLoading] = useState(false);
   const [backHome, setBackHome] = useState(false);
+  const [animationData, setAnimationData] = useState(null);
 
+// Page load hote hi JSON fetch karein (but bundle mein nahi jayega)
+useEffect(() => {
+  fetch("/verifyloader.json")
+    .then((response) => response.json())
+    .then((data) => setAnimationData(data));
+}, []);
   const handleVerifySubmit = async (e) => {
     e.preventDefault();
 
@@ -66,6 +73,9 @@ const Verify = () => {
 
   return (
     <div className={styles.verifyContainer}>
+      <ScrollToTop/>
+
+
       <center>
         <h1 className={styles.verifyHeading}>Verification</h1>
         <div className={styles.enterid}>Enter Your Certificate ID:</div>
@@ -84,6 +94,7 @@ const Verify = () => {
               type="submit"
               disabled={loading}
               className={styles.verifyBtn}
+              aria-label="Search Button"
             >
               <img src="/images/search.svg" alt="search" />
             </button>
@@ -100,7 +111,7 @@ const Verify = () => {
               <div
                 style={{ width: "90%", maxWidth: "400px", marginTop: "15px" }}
               >
-                <Lottie animationData={loaderAnimation} loop={true} />
+                <Lottie animationData={animationData} loop={true} />
               </div>
               <p className={styles.verifying}>Verifying with Database...</p>
             </div>
@@ -135,7 +146,7 @@ const Verify = () => {
 
                 <div className={styles.cardFooter}>
                   <Link to="/">
-                    <button className={styles.homeBtn}>
+                    <button className={styles.homeBtn} aria-label="Return to Home">
                       <span>← </span>Back To Home
                     </button>
                   </Link>
@@ -167,7 +178,7 @@ const Verify = () => {
                 </p>
                 <div>
                   <Link to="/">
-                    <button className={styles.homeBtn}>
+                    <button className={styles.homeBtn} aria-label="Back to Home">
                       <span>← </span>Back To Home
                     </button>
                   </Link>

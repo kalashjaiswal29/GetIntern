@@ -5,10 +5,7 @@ import { useState ,useEffect} from "react";
 
 const NavBar = () => {
 
-  const [hamMenu, setHamMenu] = useState(false);
-const toggleHamMenu = () => {
-  setHamMenu((prev) => !prev);
-};
+
 
 // useEffect(() => {
 //   console.log("Hamburger Menu is now: ", hamMenu);
@@ -18,7 +15,7 @@ const toggleHamMenu = () => {
     <div className={styles.nav}>
       <div className={styles.navBar}>
         <NavLogo />
-        <NavRightEl toggleHamMenu={toggleHamMenu} hamMenu={hamMenu} />
+        <NavRightEl  />
       </div>
       <div className={styles.navLine}></div>
     </div>

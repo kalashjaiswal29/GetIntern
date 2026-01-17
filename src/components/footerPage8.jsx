@@ -1,6 +1,23 @@
 import styles from "../style/footer.module.css";
+import { HashLink as Link } from "react-router-hash-link";
+
+
 
 const Footer = () => {
+  const footerLinks = [
+    { label: "Home", target: "/#heroSection" },
+    { label: "About Us", target: "/#aboutSection" },
+    { label: "Services", target: "/#servicesSection" },
+    { label: "Domains", target: "/#domainsSection" },
+    { label: "Apply Now", target: "/apply" },
+  ];
+    const scrollwithoffset = (el) => {
+    setTimeout(()=>{
+      const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80; // Adjust this value to your navbar height
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+    },5)
+  }
   return (
     <footer className={styles.footerSection}>
       <div className={styles.footerContainer}>
@@ -10,13 +27,21 @@ const Footer = () => {
         <span className={styles.footer2}>
           Building career foundations for students
         </span>
-        <span className={styles.footer3}>
-          <span>Home</span>
-          <span>About Us</span>
-          <span>Services</span>
-          <span>Domains</span>
-          <span>FAQs</span>
-        </span>
+        <ul style={{listStyle:"none"}} className={styles.footer3}>
+          {footerLinks.map(link=>{
+             
+            return(  <Link smooth
+                        key={link.label}
+                        to={link.target}
+                        duration ={1000}
+                        scroll={
+                          scrollwithoffset}
+                      >
+                       <li>{link.label}</li>
+                      </Link>)
+          })}
+          
+        </ul>
         <span className={styles.footer4}>
           <span>
             Email -{" "}

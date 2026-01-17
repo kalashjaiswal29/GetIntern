@@ -16,7 +16,7 @@ html, body {
 
 html{
   font-size: 16px;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 } 
 
 body{
@@ -36,7 +36,18 @@ img {
     font-size: 12px;
   }
 } */
-
+#heroSection, 
+#domainsSection, 
+#servicesSection {
+  scroll-margin-top: 80px; /* Aapke NavBar ki height (5.6rem ≈ 90px) ke according adjust karein */
+}
+@media(max-width:1240) {
+  #heroSection, 
+#domainsSection, 
+#servicesSection {
+  scroll-margin-top: 50px; /* Aapke NavBar ki height (5.6rem ≈ 90px) ke according adjust karein */
+}
+}
 @media(max-width:455px) {
   
 body{

@@ -28,6 +28,7 @@ const StartYourJourney = () => {
     <div className={styles.startYJContainer}>
       <h1 className={styles.startHead}>Start Your Journey</h1>
       <div className={styles.stepsContainer}>
+        
         {step.map(({ no, title, subHead }) => {
           return (<li className={styles.stepBox} key={no}>
             <div className={styles.stepCircle}>{no}</div>
@@ -35,6 +36,7 @@ const StartYourJourney = () => {
             <p className={styles.stepSubHead}>{subHead}</p>
           </li>);
         })}
+       
       </div>
       <div className={styles.dividerLine}>
       </div>

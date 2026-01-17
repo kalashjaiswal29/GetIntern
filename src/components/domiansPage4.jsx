@@ -53,6 +53,7 @@ const Domains = () => {
         <div className={styles.cardsContainer}>
           {cardsContent.map(({ img, title }) => {
             return (
+             
               <Link to="/apply">
               <li className={styles.card} key={title}>
                 <div className={styles.iconCircle}>

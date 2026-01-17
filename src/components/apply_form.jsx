@@ -12,7 +12,31 @@ const ApplyForm = () => {
   const [zoomSrc, setZoomSrc] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedDomain, setSelectedDomain] = useState("");
+  const durationOptions = [
+    {durationOptions:"2 weeks",price:"49"},
+    {durationOptions:"4 weeks (1 month)",price:"99"},
+    {durationOptions:"8 weeks (2 months)",price:"179"},
+    {durationOptions:"12 weeks (3 months)",price:"249"},
+    {durationOptions:"16 weeks (4 months)",price:"299"},
+    {durationOptions:"20 weeks (5 months)",price:"349"},
+    {durationOptions:"24 weeks (6 months)",price:"399"},
+  ];
+  const [presentDuration,setPresentDuration] = useState("")
+  const [price, setPrice] = useState("__")
+  const handleDuration = (e) => {
+    const selectedVal = e.target.value; // Turant value variable mein lein
+  setPresentDuration(selectedVal);
 
+  // .find() use karein kyunki humein sirf ek match chahiye
+  const presentDurObj = durationOptions.find(durOpt => 
+    durOpt.durationOptions === selectedVal
+  );
+
+  if (presentDurObj) {
+    setPrice(presentDurObj.price); // Price state update karein
+    console.log("Price found:", presentDurObj.price);
+  }
+  }
   const cardsContent = [
     "Web Development",
     "Data Science",
@@ -25,21 +49,13 @@ const ApplyForm = () => {
     "VLSI",
   ];
 
-  const durationOptions = [
-    "2 weeks",
-    "4 weeks (1 month)",
-    "8 weeks (2 months)",
-    "12 weeks (3 months)",
-    "16 weeks (4 months)",
-    "20 weeks (5 months)",
-    "24 weeks (6 months)",
-  ];
+
 
   const batchDates = [
-    "20 Jan 2026",
+    
     "28 Jan 2026",
     "5 Feb 2026",
-    "12 Feb 2026",
+    "12 Feb 2026","19 Feb 2026"
   ];
 
   useEffect(() => {
@@ -309,11 +325,11 @@ const ApplyForm = () => {
             <div className={styles.radioGroup}>
               {durationOptions.map((option) => (
                 <label
-                  key={option}
+                  key={option.durationOptions}
                   className={`${styles.pill} ${styles.durationPill}`}
                 >
-                  <input type="radio" name="duration" value={option} required />
-                  <span className={styles.pillLabel}>{option}</span>
+                  <input type="radio" name="duration" value={option.durationOptions} onChange={handleDuration} required/>
+                  <span className={styles.pillLabel}>{option.durationOptions}</span>
                 </label>
               ))}
             </div>
@@ -349,6 +365,7 @@ const ApplyForm = () => {
                 No hidden charges at any stage <br />
                 Registration fee is non-refundable
               </div>
+              <p>price: ₹{price}</p>
             </div>
             <div className={styles.fieldLabel}>
               <h3 className={styles.h3}>Promo Code (optional)</h3>
@@ -386,6 +403,7 @@ const ApplyForm = () => {
           </section>
 
           <button
+            aria-label="Submit Application"
             className={!fetchStatus ? styles.submitButton : styles.hideBtn}
             type="submit"
           >

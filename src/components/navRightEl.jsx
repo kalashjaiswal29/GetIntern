@@ -1,44 +1,98 @@
 import styles from "../style/NavBar.module.css";
 import { HashLink as Link } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 
-const NavRightEl = ({ toggleHamMenu, hamMenu }) => {
-  let navLinks = [
-    { label: "Home", target: "#heroSection" },
-    { label: "Internships", target: "#domainsSection" },
-    { label: "Services", target: "#servicesSection" },
-    { label: "Verify", target: "/verification" },
-    { label: "Apply Now", target: "/apply" },
+const NavRightEl = () => {
+  const location = useLocation();
+  const [activeSec, setActiveSec] = useState("heroSection");
+  const lastActiveRef = useRef("heroSection");
+  const [hamMenu, setHamMenu] = useState(false);
+
+  const toggleHamMenu = () => {
+    setHamMenu((prev) => !prev);
+  };
+
+  // Scroll logic to detect sections without lagging
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      setActiveSec(""); 
+      return;
+    }
+
+    const sectionIds = ["heroSection", "commitmentSection", "stepsSection", "domainsSection", "servicesSection"];
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            let id = entry.target.id;
+            if (id === "heroSection" || id === "commitmentSection" || id === "stepsSection") {
+              id = "heroSection";
+            }
+            if (lastActiveRef.current !== id) {
+              lastActiveRef.current = id;
+              window.requestAnimationFrame(() => setActiveSec(id));
+            }
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40% 0px" }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [location.pathname]);
+
+  const navLinks = [
+    { label: "Home", target: "/#heroSection", id: "heroSection" },
+    { label: "Internships", target: "/#domainsSection", id: "domainsSection" },
+    { label: "Services", target: "/#servicesSection", id: "servicesSection" },
+    { label: "Verify", target: "/verification", id: "verification" },
+    { label: "Apply Now", target: "/apply", id: "apply" },
   ];
-  
+
+  const isLinkActive = (item) => {
+    if (location.pathname === item.target) return true;
+    if (location.pathname === "/" && activeSec === item.id) return true;
+    return false;
+  };
+
   return (
     <>
-      {/* 1. Desktop Menu (Visible only on Large Screens) */}
+      {/* NEW: Overlay to close menu when tapping outside */}
+      <div 
+        className={`${styles.overlay} ${hamMenu ? styles.overlayActive : ""}`} 
+        onClick={toggleHamMenu} 
+      />
+
+      {/* 1. Desktop Menu */}
       <div className={styles.navRight1}>
         {navLinks.map((item) => (
-          <Link smooth
+          <Link 
+            smooth
             key={item.label}
-            activeClass={styles.activeLi}
             to={item.target}
-            spy={true}
-           
-            duration={1000}
-            offset={-70}
+            className={`${styles.navLink} ${isLinkActive(item) ? styles.activeLi : ""}`}
           >
             <li className={styles.li}>{item.label}</li>
           </Link>
         ))}
       </div>
 
-      {/* 2. Mobile Dropdown Menu (Animate from Top) */}
+      {/* 2. Mobile Dropdown Menu */}
       <div className={`${styles.navRightHam} ${hamMenu ? styles.navOpen : ""}`}>
         {navLinks.map((item) => (
-          <Link smooth
+          <Link 
+            smooth
             key={item.label + "-mob"}
             to={item.target}
-            spy={true}
-            
-            duration={800}
-            onClick={toggleHamMenu} // Click karne par menu band ho jaye
+            onClick={toggleHamMenu}
+            className={`${styles.navLink} ${isLinkActive(item) ? styles.activeLi : ""}`}
           >
             <li className={styles.li}>{item.label}</li>
           </Link>
@@ -56,8 +110,8 @@ const NavRightEl = ({ toggleHamMenu, hamMenu }) => {
         <img
           src="/images/close.svg"
           loading="lazy"
-          alt="menu"
-          className={!hamMenu ? styles.crossActiveImg : styles.crossDeactiveImg}
+          alt="close"
+          className={hamMenu ? styles.crossActiveImg : styles.crossDeactiveImg}
         />
       </div>
     </>

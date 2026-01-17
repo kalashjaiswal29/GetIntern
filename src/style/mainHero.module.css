@@ -422,6 +422,15 @@
   }
   .buttonGroup {
   margin-top: 1.8rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+transform: rotateX(180deg)}  
+
+.buttonGroup > * {
+  transform: rotateX(180deg); /* Items ko wapas seedha kar diya taaki text ulta na dikhe */
+  justify-self: center; /* Button stretch na ho isliye */
+  width: max-content;
 }
   .withText {
     line-height: 1.7rem;
@@ -433,9 +442,3 @@
   }
 }
 
-@media(max-width:408px){
-  .buttonGroup{
-    display: flex;
-    flex-wrap:wrap-reverse ;
-  }
-}

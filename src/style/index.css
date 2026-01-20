@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0rem;
   padding: 0rem;
@@ -6,23 +6,24 @@
 
 .main-wrapper {
   /* max-width: 1270px;  / Figma frame width */
-  margin: 0 auto;      /* center the layout */
+  margin: 0 auto; /* center the layout */
 }
 
-html, body {
+html,
+body {
   /* prevent horizontal overflow on small screens */
-  overflow-x:hidden
+  overflow-x: hidden;
 }
 
-html{
+html {
   font-size: 16px;
   scroll-behavior: smooth !important;
-} 
+}
 
-body{
+body {
   background-color: #ffffff;
   /* padding: 4.981204rem 3.12vw 0 3.12vw;  */
-  padding-top: 4.981204rem;
+  padding-top: 7.502rem;
 }
 
 /* Make all images responsive to avoid pushing layout wider than viewport */
@@ -30,34 +31,41 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-} 
+}
 /* @media(max-width:998px){
   html{
     font-size: 12px;
   }
 } */
-#heroSection, 
-#domainsSection, 
+#heroSection,
+#domainsSection,
 #servicesSection {
   scroll-margin-top: 80px; /* Aapke NavBar ki height (5.6rem ≈ 90px) ke according adjust karein */
 }
-@media(max-width:1240) {
-  #heroSection, 
-#domainsSection, 
-#servicesSection {
-  scroll-margin-top: 50px; /* Aapke NavBar ki height (5.6rem ≈ 90px) ke according adjust karein */
+@media (max-width: 1240) {
+  #heroSection,
+  #domainsSection,
+  #servicesSection {
+    scroll-margin-top: 50px; /* Aapke NavBar ki height (5.6rem ≈ 90px) ke according adjust karein */
+  }
 }
-}
-@media(max-width:455px) {
-  
-body{
-  padding-top: 3.769124rem;
-}
+@media (max-width: 455px) {
+  body {
+    padding-top: 3.769124rem;
+  }
 }
 
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none; /* Underline hatane ke liye */
-  color: inherit;        /* Parent element ka color lene ke liye */
-  outline: none;        
-   /* Click karne par aane wala border hatane ke liye */
+  color: inherit; /* Parent element ka color lene ke liye */
+  outline: none;
+  /* Click karne par aane wala border hatane ke liye */
+}
+@media (max-width: 935px) {
+body {
+  padding-top: 4.98rem;
+}
 }

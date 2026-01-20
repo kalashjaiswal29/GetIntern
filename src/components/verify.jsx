@@ -35,7 +35,7 @@ useEffect(() => {
 
     try {
       const response = await fetch(
-        `https://script.google.com/macros/s/AKfycbznsytIop8AwReveTJ8PZrdzSiluUTGcqAfDg5NySVVwpF4PxQYk7RW3sA7EB00209h_w/exec?id=${verifyID}`,
+        `https://script.google.com/macros/s/AKfycbxbre7i0C_pKeO9IXs6IwVdVDw4bBWOJ38dLfdSjLJ3k7VlHf88zPIZEMS-QethGiwrpw/exec?id=${verifyID}`,
         { 
           method: "GET",
           signal: controller.signal,

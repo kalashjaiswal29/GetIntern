@@ -1,6 +1,6 @@
 .secondcontainer {
   width: 100%;
-  background-color: #F6F9FF;
+  background-color: #f6f9ff;
   /* margin-inline: -3.12vw; */
 }
 
@@ -23,13 +23,11 @@
   align-items: center;
 }
 
-
 .icons {
   height: 3.9rem;
   position: absolute;
   top: 30%;
   right: 40%;
-
 }
 
 .tasks {
@@ -41,7 +39,7 @@
   height: 4.5592rem;
   width: 4.5592rem;
   border-radius: 50%;
-  background-color: rgb(255, 122, 0, 0.60);
+  background-color: rgb(255, 122, 0, 0.6);
   position: relative;
   margin: auto;
 }
@@ -49,7 +47,7 @@
 .qualityHead {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  color: #0B1F3A;
+  color: #0b1f3a;
   font-size: 1.2232rem;
   line-height: 2.78rem;
   text-align: center;
@@ -66,7 +64,7 @@
 }
 
 .commitmentHead {
-  color: #0B1F3A;
+  color: #0b1f3a;
   font-size: 2.2796rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -83,7 +81,6 @@
   white-space: normal;
   /* overflow-wrap: break-word; */
   /* word-wrap: break-word; */
-
 }
 
 .boxContainer {
@@ -94,20 +91,20 @@
   column-gap: clamp(1.946rem, 4vw, 6rem);
 }
 
-
 .commitmentBox {
   max-width: 24.9rem;
   font-family: "Montserrat", sans-serif;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 0.8896rem;
   box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.06);
   padding: 1.182rem 1.182rem;
   display: flex;
   flex-wrap: nowrap;
   z-index: 2;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   cursor: pointer;
-
 }
 
 .commitmentBox:hover {
@@ -126,7 +123,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .commitBoxIcon {
@@ -135,7 +131,7 @@
 
 .commitBoxHead {
   font-weight: 600;
-  color: #0B1F3A;
+  color: #0b1f3a;
   font-size: 1.112rem;
   line-height: 1.946rem;
 }
@@ -147,8 +143,6 @@
   line-height: 1.5012rem;
 }
 
-
-
 .triangularIMG {
   position: absolute;
   right: 0rem;
@@ -157,30 +151,23 @@
   z-index: 1;
 }
 
-@media(max-width:1240px) {
+@media (max-width: 1240px) {
   .triangularIMG {
     height: 31rem;
     width: 43.32rem;
   }
 
   .container {
-
     /* padding: 0 1.946rem; */
     max-width: 1000px;
-
   }
-
-
 }
 
-@media(max-width:998px) {
+@media (max-width: 998px) {
   .qualityItem {
-
-
     flex: 0 0 calc(50% - 2rem);
     /* 12px = gap/2 */
     max-width: calc(50% - 2rem);
-
   }
 
   .qualitiesContainer {
@@ -188,7 +175,6 @@
     row-gap: 4rem;
     /* column-gap: clamp(6rem,6vw,18rem) */
     justify-content: space-between;
-
   }
 
   .triangularIMG {
@@ -196,7 +182,6 @@
   }
 
   .container {
-
     /* padding: 0 1.946rem; */
     max-width: 768px;
   }
@@ -205,7 +190,6 @@
     font-weight: 600;
 
     font-size: 1.1064rem;
-
   }
 
   .commitmentHead {
@@ -222,102 +206,84 @@
     color: #555555e8;
   }
   .commitmentBox {
-  max-width: 100%;
-  
-  /* border-radius: 0.8896rem; */
-  padding: 1.182rem 1.182rem;
-  
+    max-width: 100%;
 
-}
-.commitBoxHead {
-  font-size: 1.1rem;
-}
+    /* border-radius: 0.8896rem; */
+    padding: 1.182rem 1.182rem;
+  }
+  .commitBoxHead {
+    font-size: 1.1rem;
+  }
 
-.commitBoxIcons {
-  height: 2.68rem;
-  width: 2.68rem;
+  .commitBoxIcons {
+    height: 2.68rem;
+    width: 2.68rem;
+  }
+  .icons {
+    height: 3.5rem;
+    position: absolute;
+    top: 30%;
+    right: 40%;
+  }
 
+  .tasks {
+    height: 3.24736rem;
+    top: 25%;
+  }
 
-}
-.icons {
-  height: 3.5rem;
-  position: absolute;
-  top: 30%;
-  right: 40%;
+  .orangeCircle {
+    height: 4.1592rem;
+    width: 4.1592rem;
 
-}
-
-.tasks {
-  height: 3.24736rem;
-  top: 25%;
-}
-
-.orangeCircle {
-  height: 4.1592rem;
-  width: 4.1592rem;
-  
-  background-color: rgb(255, 122, 0, 0.6);
-  
+    background-color: rgb(255, 122, 0, 0.6);
+  }
 }
 
-}
-
-@media(max-width:767px){
-   .commitmentHead {
+@media (max-width: 767px) {
+  .commitmentHead {
     font-size: 1.89rem;
     font-weight: 600;
   }
   .commitmentSubHead {
-  margin-top: 1rem;
-}
-.container {
-  max-width: 576px;
-}
-
-}
-
-@media(max-width:575px){
-.container {
-  
-  padding: 0 1rem;
-  
+    margin-top: 1rem;
+  }
+  .container {
+    max-width: 576px;
+  }
 }
 
+@media (max-width: 575px) {
+  .container {
+    padding: 0 1rem;
+  }
 }
 
-@media(max-width:535px){
-.qualityItem {
-
-  
- flex-basis: calc(100% - 2rem);
+@media (max-width: 535px) {
+  .qualityItem {
+    flex-basis: calc(100% - 2rem);
     max-width: calc(100% - 2rem);
     margin-inline: auto;
+  }
 }
-
-
-}
-@media(max-width:454px) {
+@media (max-width: 454px) {
   .container {
-  margin-top: 5rem;
-  
-}
+    margin-top: 5rem;
+  }
   .commitmentSubHead {
-  margin-top: 0.6rem;
-}
-.commitmentHead {
+    margin-top: 0.6rem;
+  }
+  .commitmentHead {
     font-size: 1.7rem;
     font-weight: 600;
   }
 }
-@media(max-width:343px){
+@media (max-width: 343px) {
   .qualityHead {
-  
-  line-height: 2rem;
-}
-.commitmentSubHead {
-  margin-top: 1.1rem;
-  /* overflow-wrap: break-word; */
-  /* word-wrap: break-word; */
-
-}
+    line-height: 2rem;
+  }
+  .commitmentSubHead {
+    margin-top: 1.1rem;
+    /* overflow-wrap: break-word; */
+    /* word-wrap: break-word; */
+  }
 }

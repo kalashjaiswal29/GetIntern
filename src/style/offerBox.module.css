@@ -1,0 +1,76 @@
+.offerContainer {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  /* Ghost Orange Transparent Background */
+  background: rgba(254, 132, 9, 0.08); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(254, 132, 9, 0.15);
+  z-index: 1001;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 1200px;
+}
+
+.limitedBadge {
+  background-color: #fe8409;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  white-space: nowrap;
+}
+
+.mainText {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #0b1f3a; /* Dark Blue */
+  margin: 0;
+  line-height: 1.2;
+}
+
+.highlight {
+  font-weight: 700;
+  color: #0b1f3a;
+}
+
+.freeText {
+  color: #fe8409;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #0b1f3a;
+  opacity: 0.5;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.closeBtn:hover {
+  opacity: 1;
+}
+@media (max-width: 935px) {
+  .offerContainer{
+    display: none;
+  }
+}

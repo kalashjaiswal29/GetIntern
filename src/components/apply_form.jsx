@@ -4,6 +4,8 @@ import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import ScrollToTop from "./scrollTop.jsx";
 
+
+
 const ApplyForm = () => {
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
@@ -13,30 +15,32 @@ const ApplyForm = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedDomain, setSelectedDomain] = useState("");
   const durationOptions = [
-    {durationOptions:"2 weeks",price:"49"},
-    {durationOptions:"4 weeks (1 month)",price:"99"},
-    {durationOptions:"8 weeks (2 months)",price:"179"},
-    {durationOptions:"12 weeks (3 months)",price:"249"},
-    {durationOptions:"16 weeks (4 months)",price:"299"},
-    {durationOptions:"20 weeks (5 months)",price:"349"},
-    {durationOptions:"24 weeks (6 months)",price:"399"},
+    { durationOptions: "2 weeks", price: "₹49", oldPrice: "99" },
+    { durationOptions: "4 weeks (1 month)", price: "₹99" , oldPrice: "199" },
+    { durationOptions: "8 weeks (2 months)", price: "₹179", oldPrice: "249" },
+    { durationOptions: "12 weeks (3 months)", price: "₹249", oldPrice: "319" },
+    { durationOptions: "16 weeks (4 months)", price: "₹299", oldPrice: "389" },
+    { durationOptions: "20 weeks (5 months)", price: "₹349", oldPrice: "489" },
+    { durationOptions: "24 weeks (6 months)", price: "₹399", oldPrice: "509" },
   ];
-  const [presentDuration,setPresentDuration] = useState("")
-  const [price, setPrice] = useState("__")
+  const [presentDuration, setPresentDuration] = useState("");
+  const [price, setPrice] = useState("__");
+  const [oldPrice, setOldPrice] = useState("");
   const handleDuration = (e) => {
     const selectedVal = e.target.value; // Turant value variable mein lein
-  setPresentDuration(selectedVal);
+    setPresentDuration(selectedVal);
 
-  // .find() use karein kyunki humein sirf ek match chahiye
-  const presentDurObj = durationOptions.find(durOpt => 
-    durOpt.durationOptions === selectedVal
-  );
+    // .find() use karein kyunki humein sirf ek match chahiye
+    const presentDurObj = durationOptions.find(
+      (durOpt) => durOpt.durationOptions === selectedVal,
+    );
 
-  if (presentDurObj) {
-    setPrice(presentDurObj.price); // Price state update karein
-    console.log("Price found:", presentDurObj.price);
-  }
-  }
+    if (presentDurObj) {
+      setPrice(presentDurObj.price); // Price state update karein
+      setOldPrice(presentDurObj.oldPrice)
+      console.log("Price found:", presentDurObj.price);
+    }
+  };
   const cardsContent = [
     "Web Development",
     "Data Science",
@@ -49,13 +53,11 @@ const ApplyForm = () => {
     "VLSI",
   ];
 
-
-
   const batchDates = [
-    
     "28 Jan 2026",
     "5 Feb 2026",
-    "12 Feb 2026","19 Feb 2026"
+    "12 Feb 2026",
+    "19 Feb 2026",
   ];
 
   useEffect(() => {
@@ -84,13 +86,13 @@ const ApplyForm = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbznsytIop8AwReveTJ8PZrdzSiluUTGcqAfDg5NySVVwpF4PxQYk7RW3sA7EB00209h_w/exec",
-        { 
-          method: "POST", 
+        "https://script.google.com/macros/s/AKfycbxbre7i0C_pKeO9IXs6IwVdVDw4bBWOJ38dLfdSjLJ3k7VlHf88zPIZEMS-QethGiwrpw/exec",
+        {
+          method: "POST",
           body: formData,
           // ✅ mode: "no-cors" hata diya gaya hai
-          redirect: "follow" // Google's 302 redirect ko allow karne ke liye
-        }
+          redirect: "follow", // Google's 302 redirect ko allow karne ke liye
+        },
       );
 
       // ✅ Response read karna shuru
@@ -136,6 +138,7 @@ const ApplyForm = () => {
   return (
     <div className={styles.applyContainer}>
       <ScrollToTop />
+      
       <Toaster position="top-center" />
       <h1 className={styles.h1}>GetIntern - Internship Application Form</h1>
       <section className={styles.sectionCard}>
@@ -181,6 +184,7 @@ const ApplyForm = () => {
               </p>
             </div>
           </div>
+          
 
           <div className={styles.trustCard}>
             <div className={styles.cardIcon}>⏳</div>
@@ -328,8 +332,16 @@ const ApplyForm = () => {
                   key={option.durationOptions}
                   className={`${styles.pill} ${styles.durationPill}`}
                 >
-                  <input type="radio" name="duration" value={option.durationOptions} onChange={handleDuration} required/>
-                  <span className={styles.pillLabel}>{option.durationOptions}</span>
+                  <input
+                    type="radio"
+                    name="duration"
+                    value={option.durationOptions}
+                    onChange={handleDuration}
+                    required
+                  />
+                  <span className={styles.pillLabel}>
+                    {option.durationOptions}
+                  </span>
                 </label>
               ))}
             </div>
@@ -353,7 +365,6 @@ const ApplyForm = () => {
               autoComplete="off"
             />
             <input type="hidden" name="form_loaded_at" value={Date.now()} />
-
           </section>
 
           <section className={styles.sectionCard}>
@@ -365,7 +376,9 @@ const ApplyForm = () => {
                 No hidden charges at any stage <br />
                 Registration fee is non-refundable
               </div>
-              <p>price: ₹{price}</p>
+              <p>price: <del>₹{oldPrice} </del><strong>{price}</strong></p>
+              <h5>You will receive a confirmation mail, if you get selected for free internship under Founding Intern Program.</h5>
+              <h5>(Valid for - Batch (28 Jan 2026, 4 weeks))</h5>
             </div>
             <div className={styles.fieldLabel}>
               <h3 className={styles.h3}>Promo Code (optional)</h3>

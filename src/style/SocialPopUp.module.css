@@ -6,17 +6,17 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  
-  background: rgba(254, 132, 9, 0.08); 
+
+  background: rgba(254, 132, 9, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  
+
   padding: 0.6rem 1.4rem 0.6rem 0.6rem;
-  border-radius: 4rem; 
+  border-radius: 4rem;
   border: 1px solid rgba(254, 132, 9, 0.2);
   box-shadow: 0 10px 40px rgba(11, 31, 58, 0.08);
   cursor: pointer;
-  
+
   /* FIX: translate3d for hardware acceleration */
   transform: translate3d(180%, 0, 0);
   /* FIX: Added will-change for pre-rendering */
@@ -99,7 +99,7 @@
     right: 1.2rem;
     padding: 0.5rem 1rem 0.5rem 0.5rem;
     gap: 0.6rem;
-    max-width: 85vw; 
+    max-width: 85vw;
   }
 
   .iconWrapper {
@@ -129,8 +129,14 @@
     padding: 0.5rem 1rem 0.5rem 0.5rem;
     gap: 0.6rem;
     /* Taki phone par bahut zyada jagah na le */
-    max-width: 85vw; 
+    max-width: 85vw;
   }
+.textContainer {
+  display:none
+}
+.popupContainer{
+  padding-right: 0.5rem;
+}
 
   .iconWrapper {
     /* Footer style icon - small size for mobile */

@@ -107,7 +107,7 @@ const Footer = () => {
         </div>
         <div className={styles.copyWright}>
           <p className={styles.line1}>
-            <span>Copyright © 2025 GetIntern™.</span>{" "}
+            <span>Copyright © 2026 GetIntern™.</span>{" "}
             <span className={styles.rights}>All rights reserved.</span>
           </p>
           <p className={styles.line2}>

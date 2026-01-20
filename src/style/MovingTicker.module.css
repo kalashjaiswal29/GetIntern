@@ -1,0 +1,79 @@
+.tickerContainer {
+  /* Only visible below 935px */
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  
+  /* Ghost Orange Glass Theme */
+  background: rgba(254, 132, 9, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  border-top: 1.5px solid rgba(254, 132, 9, 0.2);
+  z-index: 10005;
+  overflow: hidden;
+  align-items: center;
+}
+
+@media (max-width: 935px) {
+  .tickerContainer {
+    display: flex;
+  }
+}
+
+.tickerTrack {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 30s linear infinite; /* Smooth slow motion */
+}
+
+/* User hover ya touch kare toh animation slow/stop ho jaye */
+.tickerContainer:hover .tickerTrack {
+  animation-play-state: paused;
+}
+
+.tickerGroup {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Forces text in one line */
+}
+
+.itemWrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.mainTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0b1f3a; /* Dark Blue */
+  margin-right: 8px;
+}
+
+.highlightText {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fe8409; /* Theme Orange */
+}
+
+.separator {
+  margin-left: 20px;
+  color: rgba(11, 31, 58, 0.2);
+  font-weight: 300;
+}
+
+@keyframes scrollLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Half track length for seamless loop */
+}
+
+/* Mobile adjustments */
+@media (max-width: 455px) {
+  .mainTitle, .highlightText { font-size: 0.75rem; }
+}

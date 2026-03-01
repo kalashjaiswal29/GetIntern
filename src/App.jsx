@@ -4,10 +4,11 @@ import Footer from "./components/footerPage8.jsx";
 import SocialPopup from "./components/SocialPopup.jsx"
 import OfferBox from "./components/offerBox.jsx"
 import MovingTicker from "./components/movingTicker.jsx"
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   return (<>
-  
+    <Analytics />
       <OfferBox/>
    <NavBar />
    <SocialPopup/>

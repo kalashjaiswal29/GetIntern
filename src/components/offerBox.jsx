@@ -13,7 +13,7 @@ const OfferBox = () => {
         <div className={styles.limitedBadge}>Founding Intern</div>
         <p className={styles.mainText}>
           🎉 <span className={styles.highlight}>Exclusive Offer:</span> 
-          This program is <span className={styles.freeText}>FREE</span> for the first 100 students. <Link to="/apply" style={{color:"#fe8409"}}><u>Apply Now</u></Link>
+          This program is <span className={styles.freeText}>FREE</span> for the first 50 students. <Link to="/apply" style={{color:"#fe8409"}}><u>Apply Now</u></Link>
         </p>
         
       </div>

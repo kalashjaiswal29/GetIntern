@@ -54,10 +54,10 @@ const ApplyForm = () => {
   ];
 
   const batchDates = [
-    "28 Jan 2026",
-    "5 Feb 2026",
-    "12 Feb 2026",
-    "19 Feb 2026",
+    "15 March 2026",
+    "22 March 2026",
+    "29 March 2026",
+    "5 April 2026",
   ];
 
   useEffect(() => {
@@ -378,7 +378,7 @@ const ApplyForm = () => {
               </div>
               <p>price: <del>₹{oldPrice} </del><strong>{price}</strong></p>
               <h5>You will receive a confirmation mail, if you get selected for free internship under Founding Intern Program.</h5>
-              <h5>(Valid for - Batch (28 Jan 2026, 4 weeks))</h5>
+              <h5>(Valid only for - Batch (28 Jan 2026, 4 weeks))</h5>
             </div>
             <div className={styles.fieldLabel}>
               <h3 className={styles.h3}>Promo Code (optional)</h3>

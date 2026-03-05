@@ -378,7 +378,7 @@ const ApplyForm = () => {
               </div>
               <p>price: <del>₹{oldPrice} </del><strong>{price}</strong></p>
               <h5>You will receive a confirmation mail, if you get selected for free internship under Founding Intern Program.</h5>
-              <h5>(Valid only for - Batch (28 Jan 2026, 4 weeks))</h5>
+              <h5>(Valid only for - Batch (15 March 2026, 4 weeks))</h5>
             </div>
             <div className={styles.fieldLabel}>
               <h3 className={styles.h3}>Promo Code (optional)</h3>

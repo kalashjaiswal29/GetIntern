@@ -4,10 +4,10 @@ import styles from "../style/MovingTicker.module.css";
 const MovingTicker = () => {
   // Content jo website ke hisab se best hai
   const tickerItems = [
-    { text: "Founding Intern Program", highlight: "FREE for first 100 students" },
+    { text: "Founding Intern Program", highlight: "FREE for first 50 students" },
     { text: "New Domains Open", highlight: "Web Dev, AI/ML, UI/UX" },
     { text: "Get Certified", highlight: "Industry Verified Certificates" },
-    { text: "Winter Batch", highlight: "Apply Now - Limited Slots" }
+    { text: "", highlight: "Apply Now - Limited Slots" }
   ];
 
   // Ek hi line mein repeat karne ke liye

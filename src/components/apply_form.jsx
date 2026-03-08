@@ -86,7 +86,7 @@ const ApplyForm = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwh8MtqITpXLG3Ef8ysiOSH1bov97aDqamc18ADB2WRw1V0qlBfReRfk82uoqf25I5wGg/exec",
+        "https://script.google.com/macros/s/AKfycbxcvbVA8B8fc8O8Wf2VpgTyHl41jIzwjTNRnB_YAk5Jjd1UP3WHDkKsb2d79PHAUCzjEQ/exec",
         {
           method: "POST",
           body: formData,
@@ -217,6 +217,12 @@ const ApplyForm = () => {
           Applications are reviewed manually. Selected candidates will receive
           tasks and onboarding details via email.
         </p>
+        <h5 className={styles.intro}>
+          <a href="https://whatsapp.com/channel/0029Vb7Lp7f90x2w8MBlPV44" target="main" rel="noopener noreferrer" style={{color:"blue"}}>
+            Click here 
+          </a>&nbsp;to join our WhatsApp channel for real-time updates on application status and internship opportunities.
+        </h5>
+
       </section>
 
       <div className={styles.formWrapper}>

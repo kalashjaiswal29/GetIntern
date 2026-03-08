@@ -349,24 +349,35 @@
   margin-bottom: 10px;
   margin-top: 10px;
 }
-
 .zoomOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   display: none;
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  padding: 20px;
 }
 
 .zoomOverlay.show {
   display: flex;
 }
 
+.zoomImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .zoomImage img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   border-radius: 12px;
 }
 

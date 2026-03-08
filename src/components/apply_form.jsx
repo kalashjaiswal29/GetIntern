@@ -4,8 +4,6 @@ import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import ScrollToTop from "./scrollTop.jsx";
 
-
-
 const ApplyForm = () => {
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
@@ -14,33 +12,68 @@ const ApplyForm = () => {
   const [zoomSrc, setZoomSrc] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedDomain, setSelectedDomain] = useState("");
+  const [selectedBatch, setSelectedBatch] = useState(""); // NEW
+
   const durationOptions = [
     { durationOptions: "2 weeks", price: "₹49", oldPrice: "99" },
-    { durationOptions: "4 weeks (1 month)", price: "₹99" , oldPrice: "199" },
+    { durationOptions: "4 weeks (1 month)", price: "₹99", oldPrice: "199" },
     { durationOptions: "8 weeks (2 months)", price: "₹179", oldPrice: "249" },
     { durationOptions: "12 weeks (3 months)", price: "₹249", oldPrice: "319" },
     { durationOptions: "16 weeks (4 months)", price: "₹299", oldPrice: "389" },
     { durationOptions: "20 weeks (5 months)", price: "₹349", oldPrice: "489" },
     { durationOptions: "24 weeks (6 months)", price: "₹399", oldPrice: "509" },
   ];
+
   const [presentDuration, setPresentDuration] = useState("");
   const [price, setPrice] = useState("__");
   const [oldPrice, setOldPrice] = useState("");
+
   const handleDuration = (e) => {
-    const selectedVal = e.target.value; // Turant value variable mein lein
+    const selectedVal = e.target.value;
     setPresentDuration(selectedVal);
 
-    // .find() use karein kyunki humein sirf ek match chahiye
     const presentDurObj = durationOptions.find(
       (durOpt) => durOpt.durationOptions === selectedVal,
     );
 
     if (presentDurObj) {
-      setPrice(presentDurObj.price); // Price state update karein
-      setOldPrice(presentDurObj.oldPrice)
+      if (
+        selectedVal === "4 weeks (1 month)" &&
+        selectedBatch === "15 March 2026"
+      ) {
+        setPrice("Free");
+        setOldPrice(presentDurObj.oldPrice);
+      } else {
+        setPrice(presentDurObj.price);
+        setOldPrice(presentDurObj.oldPrice);
+      }
+
       console.log("Price found:", presentDurObj.price);
     }
   };
+
+  const handleBatchChange = (e) => {
+    const batch = e.target.value;
+    setSelectedBatch(batch);
+
+    const presentDurObj = durationOptions.find(
+      (durOpt) => durOpt.durationOptions === presentDuration,
+    );
+
+    if (presentDurObj) {
+      if (
+        presentDuration === "4 weeks (1 month)" &&
+        batch === "15 March 2026"
+      ) {
+        setPrice("Free");
+        setOldPrice(presentDurObj.oldPrice);
+      } else {
+        setPrice(presentDurObj.price);
+        setOldPrice(presentDurObj.oldPrice);
+      }
+    }
+  };
+
   const cardsContent = [
     "Web Development",
     "Data Science",
@@ -70,7 +103,6 @@ const ApplyForm = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // ✅ UPDATED handleApplySubmit (CORS COMPATIBLE)
   const handleApplySubmit = async (e) => {
     e.preventDefault();
     if (!selectedDomain) {
@@ -90,12 +122,10 @@ const ApplyForm = () => {
         {
           method: "POST",
           body: formData,
-          // ✅ mode: "no-cors" hata diya gaya hai
-          redirect: "follow", // Google's 302 redirect ko allow karne ke liye
+          redirect: "follow",
         },
       );
 
-      // ✅ Response read karna shuru
       const result = await response.json();
 
       setFetchStatus(false);
@@ -110,7 +140,6 @@ const ApplyForm = () => {
         });
         setTimeout(() => navigate("/"), 3000);
       } else {
-        // Backend se aane wala specific error message (e.g., "Daily limit reached")
         toast.error(result.message || "Submission failed", {
           id: toastId,
           className: styles.myToast,
@@ -138,7 +167,7 @@ const ApplyForm = () => {
   return (
     <div className={styles.applyContainer}>
       <ScrollToTop />
-      
+
       <Toaster position="top-center" />
       <h1 className={styles.h1}>GetIntern - Internship Application Form</h1>
       <section className={styles.sectionCard}>
@@ -184,7 +213,6 @@ const ApplyForm = () => {
               </p>
             </div>
           </div>
-          
 
           <div className={styles.trustCard}>
             <div className={styles.cardIcon}>⏳</div>
@@ -197,6 +225,7 @@ const ApplyForm = () => {
           </div>
         </div>
 
+        {/* REMAINING UI EXACT SAME AS YOUR ORIGINAL */}
         <div className={styles.intro}>
           <div>
             GetIntern is a student-first internship platform focused on
@@ -218,17 +247,24 @@ const ApplyForm = () => {
           tasks and onboarding details via email.
         </p>
         <h5 className={styles.intro}>
-          <a href="https://whatsapp.com/channel/0029Vb7Lp7f90x2w8MBlPV44" target="main" rel="noopener noreferrer" style={{color:"blue"}}>
-            Click here 
-          </a>&nbsp;to join our WhatsApp channel for real-time updates on application status and internship opportunities.
+          <a
+            href="https://whatsapp.com/channel/0029Vb7Lp7f90x2w8MBlPV44"
+            target="main"
+            rel="noopener noreferrer"
+            style={{ color: "blue" }}
+          >
+            Click here
+          </a>
+          &nbsp;to join our WhatsApp channel for real-time updates on
+          application status and internship opportunities.
         </h5>
-
       </section>
 
       <div className={styles.formWrapper}>
         <form onSubmit={handleApplySubmit} className={styles.applyForm}>
           <section className={styles.sectionCard}>
             <h3 className={styles.h3}>Personal Details</h3>
+
             <label className={styles.fieldLabel}>
               <div>Name</div>
               <input
@@ -238,6 +274,7 @@ const ApplyForm = () => {
                 required
               />
             </label>
+
             <label className={styles.fieldLabel}>
               <div>Email</div>
               <input
@@ -247,6 +284,7 @@ const ApplyForm = () => {
                 required
               />
             </label>
+
             <label className={styles.fieldLabel}>
               <div>Phone</div>
               <input
@@ -256,6 +294,7 @@ const ApplyForm = () => {
                 required
               />
             </label>
+
             <label className={styles.fieldLabel}>
               <div>College / University</div>
               <input
@@ -265,6 +304,7 @@ const ApplyForm = () => {
                 required
               />
             </label>
+
             <label className={styles.fieldLabel}>
               <div>Degree / Course</div>
               <input
@@ -274,6 +314,7 @@ const ApplyForm = () => {
                 required
               />
             </label>
+
             <label className={styles.fieldLabel}>
               <div>Current Year of Study</div>
               <input
@@ -289,8 +330,10 @@ const ApplyForm = () => {
 
           <section className={styles.sectionCard}>
             <h3 className={styles.h3}>Internship Details</h3>
+
             <div className={styles.fieldLabel}>
               <div>Choose your Domain</div>
+
               <div className={styles.customSelectContainer} ref={dropdownRef}>
                 <div
                   className={`${styles.select} ${
@@ -303,12 +346,14 @@ const ApplyForm = () => {
                   >
                     {selectedDomain || "Select your domain..."}
                   </span>
+
                   <span
                     className={`${styles.arrow} ${
                       isOpen ? styles.arrowRotate : ""
                     }`}
                   ></span>
                 </div>
+
                 <ul
                   className={`${styles.optionsList} ${
                     isOpen ? styles.showOptions : ""
@@ -329,9 +374,11 @@ const ApplyForm = () => {
                 </ul>
               </div>
             </div>
+
             <h3 className={styles.h3} style={{ marginTop: "20px" }}>
               Internship Duration
             </h3>
+
             <div className={styles.radioGroup}>
               {durationOptions.map((option) => (
                 <label
@@ -345,6 +392,7 @@ const ApplyForm = () => {
                     onChange={handleDuration}
                     required
                   />
+
                   <span className={styles.pillLabel}>
                     {option.durationOptions}
                   </span>
@@ -355,14 +403,23 @@ const ApplyForm = () => {
 
           <section className={styles.sectionCard}>
             <h3 className={styles.h3}>Upcoming Batches</h3>
+
             <div className={styles.radioGroup}>
               {batchDates.map((date) => (
                 <label key={date} className={styles.pill}>
-                  <input type="radio" name="batch_date" value={date} required />
+                  <input
+                    type="radio"
+                    name="batch_date"
+                    value={date}
+                    required
+                    onChange={handleBatchChange}
+                  />
+
                   <span className={styles.pillLabel}>{date}</span>
                 </label>
               ))}
             </div>
+
             <input
               type="text"
               name="company"
@@ -370,11 +427,13 @@ const ApplyForm = () => {
               tabIndex="-1"
               autoComplete="off"
             />
+
             <input type="hidden" name="form_loaded_at" value={Date.now()} />
           </section>
 
           <section className={styles.sectionCard}>
             <div className={styles.h3}>🔒 Payment Policy</div>
+
             <div className={styles.infoBox}>
               <div className={styles.note}>
                 Internship fee is payable after internship completion <br />
@@ -382,15 +441,26 @@ const ApplyForm = () => {
                 No hidden charges at any stage <br />
                 Registration fee is non-refundable
               </div>
-              <p>price: <del>₹{oldPrice} </del><strong>{price}</strong></p>
-              <h5>You will receive a confirmation mail, if you get selected for free internship under Founding Intern Program.</h5>
+
+              <p>
+                price: <del>₹{oldPrice}</del> <strong>{price}</strong>
+              </p>
+
+              <h5>
+                You will receive a confirmation mail, if you get selected for
+                free internship under Founding Intern Program.
+              </h5>
+
               <h5>(Valid only for - Batch (15 March 2026, 4 weeks))</h5>
             </div>
+
             <div className={styles.fieldLabel}>
               <h3 className={styles.h3}>Promo Code (optional)</h3>
+
               <p className={styles.note}>
                 Apply promo code for instant discount (if applicable)
               </p>
+
               <input className={styles.input} type="text" name="promo_code" />
             </div>
           </section>
@@ -400,10 +470,12 @@ const ApplyForm = () => {
               <input type="checkbox" name="agree" required />
               <span>I understand and agree that I will receive:</span>
             </label>
+
             <p className={styles.note}>
-              Offer Letter <br /> Internship Tasks & Learning Content <br />{" "}
-              Mentor Support (if needed) <br /> Completion Certificate after
-              successful completion
+              Offer Letter <br />
+              Internship Tasks & Learning Content <br />
+              Mentor Support (if needed) <br />
+              Completion Certificate after successful completion
             </p>
           </section>
 
@@ -412,6 +484,7 @@ const ApplyForm = () => {
               GetIntern does not promise guaranteed jobs. Our internships focus
               on skill-building and real-world experience.
             </p>
+
             <label className={styles.checkboxWrap}>
               <input type="checkbox" name="terms" required />
               <span>

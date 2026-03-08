@@ -280,18 +280,20 @@
 
 .pill {
   display: inline-flex;
-  align-items: center;
+  align-items: center; /* Vertical center theek hai */
+  justify-content: flex-start; /* Isse content left se shuru hoga */
   gap: 8px;
-  padding: 8px 12px;
+  padding: 8px 16px; /* Horizontal padding thodi badha di scannability ke liye */
   border-radius: 999px;
   background: #fff;
   border: 1.2px solid #f08a4f30;
   color: var(--text);
   font-size: 14px;
-  width: 8rem;
+  width: 8rem; /* Ye fix width hatakar min-width bhi use kar sakte hain */
   box-shadow: 0 0 4px rgba(254, 132, 9, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
+  text-align: left; /* Text alignment ensure karein */
 }
 
 .durationPill {
@@ -299,7 +301,9 @@
 }
 
 .pillLabel {
-  margin-inline: auto;
+  /* margin-inline: auto;  <-- Isko delete kar dein */
+  margin-left: 0; 
+  flex: 1; /* Agar space ho toh label poori jagah le le */
 }
 
 .pill input[type="radio"] {

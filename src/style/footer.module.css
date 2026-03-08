@@ -133,6 +133,12 @@ color: rgba(255, 255, 255, 0.9);
     flex-direction: column;
     text-align: center;
   }
+  .copyWright {
+  
+  bottom: 1.25rem;
+  
+}
+
 }
 
 /* -------- 447px -------- */

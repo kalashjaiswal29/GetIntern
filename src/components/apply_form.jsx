@@ -119,7 +119,7 @@ const ApplyForm = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzRgeeos1xb9OcBBrd214r22FOG5TtqQW8coPXPDNQnrVUb24bBlDrWbYiHKV2tSBhUMw/exec",
+        "https://script.google.com/macros/s/AKfycbwohVHMLn32exU3pkNgOm3D6wKcoGh47rSC7CqoZR3VuCfjsf94E8VuIYCj-G_n3aDm8A/exec",
         {
           method: "POST",
           body: formData,

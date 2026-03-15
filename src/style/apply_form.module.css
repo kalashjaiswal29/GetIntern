@@ -289,11 +289,11 @@
   border: 1.2px solid #f08a4f30;
   color: var(--text);
   font-size: 14px;
-  width: 8rem; /* Ye fix width hatakar min-width bhi use kar sakte hain */
+  min-width: 8rem; /* Ye fix width hatakar min-width bhi use kar sakte hain */
   box-shadow: 0 0 4px rgba(254, 132, 9, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
-  text-align: left; /* Text alignment ensure karein */
+  text-align: center; /* Text alignment ensure karein */
 }
 
 .durationPill {

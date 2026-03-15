@@ -39,7 +39,7 @@ const ApplyForm = () => {
     if (presentDurObj) {
       if (
         selectedVal === "4 weeks (1 month)" &&
-        selectedBatch === "15 March 2026"
+        selectedBatch === "22 March 2026"
       ) {
         setPrice("Free");
         setOldPrice(presentDurObj.oldPrice);
@@ -63,7 +63,7 @@ const ApplyForm = () => {
     if (presentDurObj) {
       if (
         presentDuration === "4 weeks (1 month)" &&
-        batch === "15 March 2026"
+        batch === "22 March 2026"
       ) {
         setPrice("Free");
         setOldPrice(presentDurObj.oldPrice);
@@ -87,10 +87,11 @@ const ApplyForm = () => {
   ];
 
   const batchDates = [
-    "15 March 2026",
     "22 March 2026",
     "29 March 2026",
     "5 April 2026",
+    "12 April 2026",
+
   ];
 
   useEffect(() => {
@@ -118,7 +119,7 @@ const ApplyForm = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycby1tTKkN0C_8UAKDARFffzDkO6LRCHoCsV26fEZeSHaIL659aF6U6c0PyLParu-cEUD9w/exec",
+        "https://script.google.com/macros/s/AKfycbzRgeeos1xb9OcBBrd214r22FOG5TtqQW8coPXPDNQnrVUb24bBlDrWbYiHKV2tSBhUMw/exec",
         {
           method: "POST",
           body: formData,
@@ -451,7 +452,7 @@ const ApplyForm = () => {
                 free internship under Founding Intern Program.
               </h5>
 
-              <h5>(Valid only for - Batch (15 March 2026, 4 weeks))</h5>
+              <h5>(Valid only for - Batch (22 March 2026, 4 weeks))</h5>
             </div>
 
             <div className={styles.fieldLabel}>

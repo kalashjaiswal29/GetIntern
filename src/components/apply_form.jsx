@@ -12,16 +12,16 @@ const ApplyForm = () => {
   const [zoomSrc, setZoomSrc] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedDomain, setSelectedDomain] = useState("");
-  const [selectedBatch, setSelectedBatch] = useState(""); // NEW
+  // const [selectedBatch, setSelectedBatch] = useState(""); // NEW/
 
   const durationOptions = [
     { durationOptions: "2 weeks", price: "₹49", oldPrice: "99" },
     { durationOptions: "4 weeks (1 month)", price: "₹99", oldPrice: "199" },
-    { durationOptions: "8 weeks (2 months)", price: "₹179", oldPrice: "249" },
-    { durationOptions: "12 weeks (3 months)", price: "₹249", oldPrice: "319" },
-    { durationOptions: "16 weeks (4 months)", price: "₹299", oldPrice: "389" },
-    { durationOptions: "20 weeks (5 months)", price: "₹349", oldPrice: "489" },
-    { durationOptions: "24 weeks (6 months)", price: "₹399", oldPrice: "509" },
+    { durationOptions: "8 weeks (2 months)", price: "₹125", oldPrice: "249" },
+    { durationOptions: "12 weeks (3 months)", price: "₹159", oldPrice: "319" },
+    { durationOptions: "16 weeks (4 months)", price: "₹195", oldPrice: "389" },
+    { durationOptions: "20 weeks (5 months)", price: "₹245", oldPrice: "489" },
+    { durationOptions: "24 weeks (6 months)", price: "₹294", oldPrice: "589" },
   ];
 
   const [presentDuration, setPresentDuration] = useState("");
@@ -37,42 +37,46 @@ const ApplyForm = () => {
     );
 
     if (presentDurObj) {
-      if (
-        selectedVal === "4 weeks (1 month)" &&
-        selectedBatch === "22 March 2026"
-      ) {
-        setPrice("Free");
-        setOldPrice(presentDurObj.oldPrice);
-      } else {
-        setPrice(presentDurObj.price);
-        setOldPrice(presentDurObj.oldPrice);
-      }
+      // if (
+      //   selectedVal === "4 weeks (1 month)" &&
+      //   selectedBatch === "22 March 2026"
+      // ) {
+      //   setPrice("Free");
+      //   setOldPrice(presentDurObj.oldPrice);
+      // } else {
+      //   setPrice(presentDurObj.price);
+      //   setOldPrice(presentDurObj.oldPrice);
+      // }
+      setPrice(presentDurObj.price);
+      setOldPrice(presentDurObj.oldPrice);
 
-      console.log("Price found:", presentDurObj.price);
+      // console.log("Price found:", presentDurObj.price);
     }
   };
 
-  const handleBatchChange = (e) => {
-    const batch = e.target.value;
-    setSelectedBatch(batch);
+  // const handleBatchChange = (e) => {
+  //   const batch = e.target.value;
+  //   setSelectedBatch(batch);
 
-    const presentDurObj = durationOptions.find(
-      (durOpt) => durOpt.durationOptions === presentDuration,
-    );
+  //   const presentDurObj = durationOptions.find(
+  //     (durOpt) => durOpt.durationOptions === presentDuration,
+  //   );
 
-    if (presentDurObj) {
-      if (
-        presentDuration === "4 weeks (1 month)" &&
-        batch === "22 March 2026"
-      ) {
-        setPrice("Free");
-        setOldPrice(presentDurObj.oldPrice);
-      } else {
-        setPrice(presentDurObj.price);
-        setOldPrice(presentDurObj.oldPrice);
-      }
-    }
-  };
+  //   if (presentDurObj) {
+  //     // if (
+  //     //   presentDuration === "4 weeks (1 month)" &&
+  //     //   batch === "22 March 2026"
+  //     // ) {
+  //     //   setPrice("Free");
+  //     //   setOldPrice(presentDurObj.oldPrice);
+  //     // } else {
+  //     //   setPrice(presentDurObj.price);
+  //     //   setOldPrice(presentDurObj.oldPrice);
+  //     // }
+  //     setPrice(presentDurObj.price);
+  //     setOldPrice(presentDurObj.oldPrice);
+  //   }
+  // };
 
   const cardsContent = [
     "Web Development",
@@ -87,11 +91,10 @@ const ApplyForm = () => {
   ];
 
   const batchDates = [
-    "22 March 2026",
-    "29 March 2026",
-    "5 April 2026",
-    "12 April 2026",
-
+    "9 April 2026",
+    "16 April 2026",
+    "23 April 2026",
+    "30 April 2026",
   ];
 
   useEffect(() => {
@@ -119,7 +122,7 @@ const ApplyForm = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwohVHMLn32exU3pkNgOm3D6wKcoGh47rSC7CqoZR3VuCfjsf94E8VuIYCj-G_n3aDm8A/exec",
+        "https://script.google.com/macros/s/AKfycbzET08Cbxrycac5lQFtIX_u_8d5q4_EWUM9D2dXXp4FAB-Ys7YKjpUcfEbnYWXr5hxfeQ/exec",
         {
           method: "POST",
           body: formData,
@@ -413,7 +416,7 @@ const ApplyForm = () => {
                     name="batch_date"
                     value={date}
                     required
-                    onChange={handleBatchChange}
+                    // onChange={handleBatchChange}
                   />
 
                   <span className={styles.pillLabel}>{date}</span>
@@ -440,19 +443,16 @@ const ApplyForm = () => {
                 Internship fee is payable after internship completion <br />
                 Payment is required before issuing certificates <br />
                 No hidden charges at any stage <br />
-                Registration fee is non-refundable
+                {/* Registration fee is non-refundable */}
               </div>
 
               <p>
                 price: <del>₹{oldPrice}</del> <strong>{price}</strong>
               </p>
 
-              <h5>
-                You will receive a confirmation mail, if you get selected for
-                free internship under Founding Intern Program.
-              </h5>
+              <h5>Internship program fee is discounted by 50% under the Founding Intern Offer. Once seats are filled, regular prices will apply.</h5>
 
-              <h5>(Valid only for - Batch (22 March 2026, 4 weeks))</h5>
+              {/* <h5>(Valid only for - Batch (22 March 2026, 4 weeks))</h5> */}
             </div>
 
             <div className={styles.fieldLabel}>

@@ -4,7 +4,7 @@ import styles from "../style/MovingTicker.module.css";
 const MovingTicker = () => {
   // Content jo website ke hisab se best hai
   const tickerItems = [
-    { text: "Founding Intern Program", highlight: "FREE for first 50 students" },
+    { text: "Founding Intern Program", highlight: "50% Scholorship for Early Applicants" },
     { text: "New Domains Open", highlight: "Web Dev, AI/ML, UI/UX" },
     { text: "Get Certified", highlight: "Industry Verified Certificates" },
     { text: "", highlight: "Apply Now - Limited Slots" }

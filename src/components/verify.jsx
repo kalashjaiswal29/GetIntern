@@ -1,8 +1,8 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import styles from "../style/verify.module.css";
-import ScrollToTop from "./scrollTop"
+import ScrollToTop from "./scrollTop";
 
 const Verify = () => {
   const [result, setResult] = useState(null);
@@ -11,12 +11,12 @@ const Verify = () => {
   const [backHome, setBackHome] = useState(false);
   const [animationData, setAnimationData] = useState(null);
 
-// Page load hote hi JSON fetch karein (but bundle mein nahi jayega)
-useEffect(() => {
-  fetch("/verifyloader.json")
-    .then((response) => response.json())
-    .then((data) => setAnimationData(data));
-}, []);
+  // Page load hote hi JSON fetch karein (but bundle mein nahi jayega)
+  useEffect(() => {
+    fetch("/verifyloader.json")
+      .then((response) => response.json())
+      .then((data) => setAnimationData(data));
+  }, []);
   const handleVerifySubmit = async (e) => {
     e.preventDefault();
 
@@ -35,19 +35,19 @@ useEffect(() => {
 
     try {
       const response = await fetch(
-        `https://script.google.com/macros/s/AKfycbwohVHMLn32exU3pkNgOm3D6wKcoGh47rSC7CqoZR3VuCfjsf94E8VuIYCj-G_n3aDm8A/exec?id=${verifyID}`,
-        { 
+        `https://script.google.com/macros/s/AKfycbzET08Cbxrycac5lQFtIX_u_8d5q4_EWUM9D2dXXp4FAB-Ys7YKjpUcfEbnYWXr5hxfeQ/exec?id=${verifyID}`,
+        {
           method: "GET",
           signal: controller.signal,
           // ✅ REDIRECT FOLLOW: Ye Google Apps Script ke CORS bypass ke liye mandatory hai
-          redirect: "follow" 
-        }
+          redirect: "follow",
+        },
       );
 
       // Backend (Apps Script) humne JSON-ready banaya hai, toh response.json() chalega
-      const data = await response.json(); 
-      
-      clearTimeout(timeoutId); 
+      const data = await response.json();
+
+      clearTimeout(timeoutId);
       setBackHome(false);
       setResult(data);
       setVerifyDone(true);
@@ -73,8 +73,7 @@ useEffect(() => {
 
   return (
     <div className={styles.verifyContainer}>
-      <ScrollToTop/>
-
+      <ScrollToTop />
 
       <center>
         <h1 className={styles.verifyHeading}>Verification</h1>
@@ -128,8 +127,12 @@ useEffect(() => {
                     GetIntern Verified
                     <span className={styles.checkIcon}>✓</span>
                   </div>
-                  <h3 className={styles.successTitle}>Verification Successful</h3>
-                  <p className={styles.idLabel}>ID: {result.certificate.id || "N/A"}</p>
+                  <h3 className={styles.successTitle}>
+                    Verification Successful
+                  </h3>
+                  <p className={styles.idLabel}>
+                    ID: {result.certificate.id || "N/A"}
+                  </p>
                 </div>
 
                 <div className={styles.infoGrid}>
@@ -137,16 +140,21 @@ useEffect(() => {
                     ([key, value]) =>
                       key !== "id" && (
                         <div key={key} className={styles.infoBox}>
-                          <span className={styles.infoLabel}>{key.replace(/_/g, " ")}</span>
+                          <span className={styles.infoLabel}>
+                            {key.replace(/_/g, " ")}
+                          </span>
                           <span className={styles.infoValue}>{value}</span>
                         </div>
-                      )
+                      ),
                   )}
                 </div>
 
                 <div className={styles.cardFooter}>
                   <Link to="/">
-                    <button className={styles.homeBtn} aria-label="Return to Home">
+                    <button
+                      className={styles.homeBtn}
+                      aria-label="Return to Home"
+                    >
                       <span>← </span>Back To Home
                     </button>
                   </Link>
@@ -178,7 +186,10 @@ useEffect(() => {
                 </p>
                 <div>
                   <Link to="/">
-                    <button className={styles.homeBtn} aria-label="Back to Home">
+                    <button
+                      className={styles.homeBtn}
+                      aria-label="Back to Home"
+                    >
                       <span>← </span>Back To Home
                     </button>
                   </Link>

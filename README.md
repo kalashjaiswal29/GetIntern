@@ -1,9 +1,11 @@
 # 🎓 GetIntern - Virtual Internship Platform
 
 <p align="center">
-  <img src="[https://img.shields.io/badge/Status-Live-brightgreen.svg](https://img.shields.io/badge/Status-Live-brightgreen.svg)" alt="Status" />
-  <img src="[https://img.shields.io/badge/Type-Automation_Workflow-blue.svg](https://img.shields.io/badge/Type-Automation_Workflow-blue.svg)" alt="Type" />
-  <img src="[https://img.shields.io/badge/MSME-Registered-orange.svg](https://img.shields.io/badge/MSME-Registered-orange.svg)" alt="MSME" />
+  <img src="https://img.shields.io/badge/Status-Live-brightgreen" alt="Status" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Type-Automation_Workflow-blue" alt="Type" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/MSME-Registered-orange" alt="MSME" />
 </p>
 
 **GetIntern** is an MSME-registered platform designed to bridge the gap between academic learning and industry requirements. By leveraging automated workflows, the platform handles intern onboarding, task distribution, and secure certificate issuance with minimal manual intervention.
@@ -81,7 +83,7 @@ As the founder, I built GetIntern to solve the problem of unverified internships
     <img src="https://img.shields.io/badge/GetIntern_Official-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Company LinkedIn" />
   </a>
 </p>
-  &nbsp;&nbsp;
+  <p align="center">
   <a href="https://www.instagram.com/getinternhq/">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
   </a>

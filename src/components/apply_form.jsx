@@ -91,10 +91,10 @@ const ApplyForm = () => {
   ];
 
   const batchDates = [
-    "23 April 2026",
     "30 April 2026",
     "8 May 2026",
     "15 May 2026",
+    "22 May 2026",
   ];
 
   useEffect(() => {
@@ -450,7 +450,10 @@ const ApplyForm = () => {
                 price: <del>₹{oldPrice}</del> <strong>{price}</strong>
               </p>
 
-              <h5>Internship program fee is discounted by 50% under the Founding Intern Offer. Once seats are filled, regular prices will apply.</h5>
+              <h5>
+                Internship program fee is discounted by 50% under the Founding
+                Intern Offer. Once seats are filled, regular prices will apply.
+              </h5>
 
               {/* <h5>(Valid only for - Batch (22 March 2026, 4 weeks))</h5> */}
             </div>

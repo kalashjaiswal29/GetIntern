@@ -96,7 +96,6 @@ const ApplyForm = () => {
     "5 June 2026",
     "12 June 2026"
   ];
-
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {

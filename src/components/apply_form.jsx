@@ -94,7 +94,7 @@ const ApplyForm = () => {
     "22 May 2026",
     "29 May 2026",
     "5 June 2026",
-    "12 June 2026"
+    "12 June 2026",
   ];
   useEffect(() => {
     const handleClickOutside = (event) => {

@@ -17,11 +17,11 @@ const ApplyForm = () => {
   const durationOptions = [
     { durationOptions: "2 weeks", price: "₹49", oldPrice: "99" },
     { durationOptions: "4 weeks (1 month)", price: "₹99", oldPrice: "199" },
-    { durationOptions: "8 weeks (2 months)", price: "₹125", oldPrice: "249" },
-    { durationOptions: "12 weeks (3 months)", price: "₹159", oldPrice: "319" },
-    { durationOptions: "16 weeks (4 months)", price: "₹195", oldPrice: "389" },
-    { durationOptions: "20 weeks (5 months)", price: "₹245", oldPrice: "489" },
-    { durationOptions: "24 weeks (6 months)", price: "₹294", oldPrice: "589" },
+    { durationOptions: "8 weeks (2 months)", price: "₹149", oldPrice: "298" },
+    { durationOptions: "12 weeks (3 months)", price: "₹199", oldPrice: "398" },
+    { durationOptions: "16 weeks (4 months)", price: "₹249", oldPrice: "498" },
+    { durationOptions: "20 weeks (5 months)", price: "₹299", oldPrice: "598" },
+    { durationOptions: "24 weeks (6 months)", price: "₹349", oldPrice: "698" },
   ];
 
   const [presentDuration, setPresentDuration] = useState("");

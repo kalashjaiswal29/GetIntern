@@ -91,10 +91,10 @@ const ApplyForm = () => {
   ];
 
   const batchDates = [
-    "5 June 2026",
     "12 June 2026",
     "19 June 2026",
-    "26 June 2026"
+    "26 June 2026",
+    "3 July 2026"
   ];
   useEffect(() => {
     const handleClickOutside = (event) => {

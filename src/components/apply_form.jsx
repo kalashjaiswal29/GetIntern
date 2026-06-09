@@ -289,7 +289,7 @@ const ApplyForm = () => {
             </label>
 
             <label className={styles.fieldLabel}>
-              <div>Phone</div>
+              <div>Phone(WhatsApp)</div>
               <input
                 className={styles.input}
                 type="tel"

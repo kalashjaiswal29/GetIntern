@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Offer Letter - GetIntern</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --text-color: #333333;
+            --light-text: #666666;
+            --border-color: #dddddd;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            background-color: #f5f5f5;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        /* Letter Container optimized for A4 print */
+        .letter-container {
+            max-width: 800px;
+            background: #ffffff;
+            margin: 0 auto;
+            padding: 60px 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .company-logo-area h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .company-details {
+            text-align: right;
+            font-size: 13px;
+            color: var(--light-text);
+            line-height: 1.4;
+        }
+
+        /* Meta details (Date & Reference) */
+        .letter-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            font-size: 14px;
+            color: var(--light-text);
+        }
+
+        /* Letter Title */
+        .letter-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            color: #111111;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .salutation {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Content Body */
+        .content {
+            font-size: 15px;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        /* Details Table/List Style */
+        .details-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .details-box h3 {
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: #111;
+        }
+
+        .details-list {
+            list-style: none;
+        }
+
+        .details-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .details-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Footer & Signatures Section */
+        .footer-section {
+            margin-top: 50px;
+        }
+
+        .closing-text {
+            margin-bottom: 40px;
+            font-size: 15px;
+        }
+
+        .graphics-and-signatures {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 20px;
+        }
+
+        .logos-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .signature-area {
+            text-align: center;
+            width: 200px;
+        }
+
+        .signature-img {
+            max-width: 150px;
+            max-height: 80px;
+            object-fit: contain;
+            margin-bottom: 5px;
+        }
+
+        .signature-line {
+            border-top: 1px dashed #333;
+            margin-top: 5px;
+            padding-top: 5px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .website-link {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: var(--light-text);
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+
+        .website-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Print optimization */
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+            .letter-container {
+                box-shadow: none;
+                border: none;
+                padding: 40px 30px;
+            }
+            button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="letter-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="company-logo-area">
+                <h1>GI GetIntern</h1>
+            </div>
+            <div class="company-details">
+                <p>contact@getintern.in</p>
+                <p>+91 6006312288</p>
+                <p>Gorakhpur U.P.</p>
+            </div>
+        </header>
+
+        <!-- Meta Data -->
+        <div class="letter-meta">
+            <div><strong>Reference:</strong> GI-DS-2026-0027</div>
+            <div><strong>Date:</strong> June 10, 2026</div>
+        </div>
+
+        <!-- Document Title -->
+        <div class="letter-title">
+            Internship Offer Letter
+        </div>
+
+        <!-- Content -->
+        <main>
+            <div class="salutation">Dear Avisa Abhiram,</div>
+            
+            <p class="content">
+                We are delighted to welcome you to the Internship Program at GetIntern. We believe your skills and enthusiasm will be a valuable asset to our team.
+            </p>
+
+            <!-- Internship Details Box -->
+            <div class="details-box">
+                <h3>Internship Details:</h3>
+                <ul class="details-list">
+                    <li><strong>Role:</strong> Data Science Intern</li>
+                    <li><strong>Start Date:</strong> June 12, 2026</li>
+                    <li><strong>End Date:</strong> August 07, 2026</li>
+                    <li><strong>Type:</strong> Unpaid Internship (Focus on Learning and Projects)</li>
+                    <li><strong>Duration:</strong> 8 Weeks</li>
+                </ul>
+            </div>
+
+            <p class="content">
+                During this period, you will have the opportunity to work on real-world projects and gain hands-on experience. Upon successful completion of the internship, you will be awarded an Internship Completion Certificate.
+            </p>
+        </main>
+
+        <!-- Footer / Closing -->
+        <footer class="footer-section">
+            <p class="closing-text">
+                We look forward to a productive and meaningful association with you.<br><br>
+                Best Regards,
+            </p>
+
+            <div class="graphics-and-signatures">
+                <!-- Badges / Logos -->
+                <div class="logos-group">
+                    <!-- Replace src with your uploaded Seal image path -->
+                    <img class="logo-placeholder" src="official_certification_seal.png" alt="Official Certification Seal">
+                    <!-- Replace src with your uploaded MSME Logo image path -->
+                    <img class="logo-placeholder" src="msme_logo.png" alt="MSME Logo">
+                </div>
+
+                <!-- Signature Block -->
+                <div class="signature-area">
+                    <!-- Replace src with your uploaded Signature image path -->
+                    <img class="signature-img" src="signature.png" alt="Founder & CEO Signature">
+                    <div class="signature-line">
+                        Founder & CEO
+                    </div>
+                </div>
+            </div>
+
+            <div class="website-link">
+                <a href="https://www.getintern.in" target="_blank">www.getintern.in</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

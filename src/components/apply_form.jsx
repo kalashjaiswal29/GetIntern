@@ -87,6 +87,7 @@ const ApplyForm = () => {
     "Python Programming",
     "UI/UX",
     "Cloud Computing",
+    "Embedded System", 
     "VLSI",
   ];
 

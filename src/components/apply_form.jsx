@@ -87,15 +87,15 @@ const ApplyForm = () => {
     "Python Programming",
     "UI/UX",
     "Cloud Computing",
-    "Embedded System", 
+    "Embedded System",
     "VLSI",
   ];
 
   const batchDates = [
-    "19 June 2026",
     "26 June 2026",
     "3 July 2026",
     "10 July 2026",
+    "17 July 2026",
   ];
   useEffect(() => {
     const handleClickOutside = (event) => {

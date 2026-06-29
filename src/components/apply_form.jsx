@@ -459,10 +459,10 @@ const ApplyForm = () => {
             </div>
 
             <div className={styles.fieldLabel}>
-              <h3 className={styles.h3}>Promo Code (optional)</h3>
+              <h3 className={styles.h3}>How did you hear about us?</h3>
 
               <p className={styles.note}>
-                Apply promo code for instant discount (if applicable)
+                Please let us know how you heard about our internship program.
               </p>
 
               <input className={styles.input} type="text" name="promo_code" />

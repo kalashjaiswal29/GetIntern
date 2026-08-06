@@ -92,12 +92,10 @@ const ApplyForm = () => {
   ];
 
   const batchDates = [
-     
-    
     "07 August 2026",
     "14 August 2026",
     "21 August 2026",
-    "28 August 2026"
+    "28 August 2026",
   ];
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -461,10 +459,11 @@ const ApplyForm = () => {
             </div>
 
             <div className={styles.fieldLabel}>
-              <h3 className={styles.h3}>How did you hear about us?</h3>
+              <h3 className={styles.h3}>Referral Code</h3>
 
               <p className={styles.note}>
-                Please let us know how you heard about our internship program.
+                Enter your referal code (if any) or leave blank. This helps us
+                track referrals and offer rewards.
               </p>
 
               <input className={styles.input} type="text" name="promo_code" />

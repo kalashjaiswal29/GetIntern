@@ -15,8 +15,8 @@ const ApplyForm = () => {
   // const [selectedBatch, setSelectedBatch] = useState(""); // NEW/
 
   const durationOptions = [
-    { durationOptions: "2 weeks", price: "₹49", oldPrice: "99" },
-    { durationOptions: "4 weeks (1 month)", price: "₹99", oldPrice: "199" },
+    { durationOptions: "2 weeks", price: "₹79", oldPrice: "99" },
+    { durationOptions: "4 weeks (1 month)", price: "₹129", oldPrice: "199" },
     { durationOptions: "8 weeks (2 months)", price: "₹149", oldPrice: "298" },
     { durationOptions: "12 weeks (3 months)", price: "₹199", oldPrice: "398" },
     { durationOptions: "16 weeks (4 months)", price: "₹249", oldPrice: "498" },

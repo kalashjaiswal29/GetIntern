@@ -239,7 +239,6 @@ const ApplyForm = () => {
             upon completion.
           </div>
           <p>Transparent process (no hidden charges)</p>
-          <p>Pay after internship completion</p>
           <p>Task-based learning, not fake internships</p>
           <p>Open for all students & freshers</p>
         </div>
@@ -457,11 +456,10 @@ const ApplyForm = () => {
             </div>
 
             <div className={styles.fieldLabel}>
-              <h3 className={styles.h3}>Referral Code</h3>
+              <h3 className={styles.h3}>How did you hear about us?</h3>
 
               <p className={styles.note}>
-                Enter your referal code (if any) or leave blank. This helps us
-                track referrals and offer rewards.
+                How did you hear about us? If you have a referral code, please enter it below.
               </p>
 
               <input className={styles.input} type="text" name="promo_code" />

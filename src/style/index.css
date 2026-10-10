@@ -22,8 +22,8 @@ html {
 
 body {
   background-color: #ffffff;
-  /* padding: 4.981204rem 3.12vw 0 3.12vw;  */
-  padding-top: 7.502rem;
+  padding-top: 4.981204rem; 
+  /* padding-top: 5.127rem; */
 }
 
 /* Make all images responsive to avoid pushing layout wider than viewport */

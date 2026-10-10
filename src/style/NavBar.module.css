@@ -6,7 +6,9 @@
 
 .nav {
   position: fixed;
-  top: 38px;
+    top: 0px;
+
+  /* top: 38px; */
   left: 0rem;
   right: 0rem;
   background-color: #ffffff;

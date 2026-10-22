@@ -92,11 +92,12 @@ const ApplyForm = () => {
   ];
 
   const batchDates = [
-    "23 October 2026",
+  
 
     "30 October 2026",
     "06 November 2026",
     "13 November 2026",
+    "20 November 2026",
     
   ];
   useEffect(() => {

@@ -92,13 +92,10 @@ const ApplyForm = () => {
   ];
 
   const batchDates = [
-  
-
-    "30 October 2026",
     "06 November 2026",
     "13 November 2026",
     "20 November 2026",
-    
+    "27 November 2026",
   ];
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -452,8 +449,6 @@ const ApplyForm = () => {
                 price: <del>₹{oldPrice}</del> <strong>{price}</strong>
               </p>
 
-             
-
               {/* <h5>(Valid only for - Batch (22 March 2026, 4 weeks))</h5> */}
             </div>
 
@@ -461,7 +456,8 @@ const ApplyForm = () => {
               <h3 className={styles.h3}>How did you hear about us?</h3>
 
               <p className={styles.note}>
-                How did you hear about us? If you have a referral code, please enter it below.
+                How did you hear about us? If you have a referral code, please
+                enter it below.
               </p>
 
               <input className={styles.input} type="text" name="promo_code" />
